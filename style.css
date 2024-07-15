@@ -1,10 +1,21 @@
-section {
-  height: 2000px;
-  background-color: gray;
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
-
+@font-face {
+  font-family: "Dunkin Sans";
+  src: url("./fonts/Dunkin Sans.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
+}
+
+a {
+  all: unset;
 }
 
 header {
@@ -13,12 +24,9 @@ header {
   top: 0;
   background: url(./img/header_bg-63efc11c.png);
   background-position: bottom;
-}
-header h1 {
   height: 56px;
-  position: relative;
-  top: 10%;
   z-index: 1;
+  font-family: "Pretendard-Regular";
 }
 header img {
   height: 100%;
@@ -31,29 +39,46 @@ header .h_w {
   justify-content: center;
 }
 header nav {
-  position: fixed;
+  position: absolute;
   top: clamp(60px, 6vw, 92px);
   width: 100%;
+  height: calc(100vh - clamp(60px, 6vw, 92px));
+  min-height: 500px;
   background-color: white;
   padding: 20px;
   padding-top: 50px;
-  font-size: 30px;
-}
-header nav div {
-  border-bottom: 1px solid rgb(228, 228, 228);
-  padding: 20px 0;
-  font-weight: bold;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
+  color: #3d332e;
 }
 header button {
   all: unset;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom: 1px solid rgb(228, 228, 228);
+  font-family: "Dunkin Sans";
+}
+header button .link {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+header button a {
+  color: white;
+  background-color: rgb(250, 126, 24);
+  border-radius: 30px;
+  font-size: 14px;
+  line-height: 34px;
+  padding: 0 20px;
+}
+header .drop {
+  padding: 20px;
 }
 header .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
   transform: rotate(90deg);
+  font-size: 20px;
 }/*# sourceMappingURL=style.css.map */
