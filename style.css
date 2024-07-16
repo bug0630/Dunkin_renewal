@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Dunkin Sans", "Pretendard-Regular";
+}
+
 a {
   all: unset;
 }
@@ -26,7 +30,6 @@ header {
   background-position: bottom;
   height: 56px;
   z-index: 1;
-  font-family: "Pretendard-Regular";
 }
 header img {
   height: 100%;
@@ -52,14 +55,17 @@ header nav {
 header button {
   all: unset;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
   padding: 20px 0;
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
   border-bottom: 1px solid rgb(228, 228, 228);
-  font-family: "Dunkin Sans";
+}
+header button .off {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
 }
 header button .link {
   width: 150px;
@@ -75,10 +81,25 @@ header button a {
   padding: 0 20px;
 }
 header .drop {
-  padding: 20px;
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s ease;
+  margin: 0 10px;
+  font-size: 16px;
+}
+header .drop li {
+  padding: 10px;
+}
+header .active .drop {
+  height: auto;
 }
 header .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-  transform: rotate(90deg);
   font-size: 20px;
+  transition: transform 0.3s ease;
+  transform: rotate(90deg);
+}
+header .rotate-270 {
+  transform: rotate(270deg);
 }/*# sourceMappingURL=style.css.map */
