@@ -3,28 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./reset.css" />
-    <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./header.js" defer></script>
+    <script src="./index.js" defer></script>
     <title>Dunkin'</title>
   </head>
   <body>
     <header>
-      <div class="h_w">
+      <div class="s_h">
         <h1>
           <a href="#">
-            <img src="./img/logo_mobile-1833920b.png" alt="로고"
-          /></a>
+            <img src="./img/logo_mobile-1833920b.png" alt="로고" />
+          </a>
         </h1>
+        <span class="material-symbols-outlined close">close</span>
         <nav>
           <button><div class="off">DUNKIN' OF MONTH</div></button>
           <button>
             <div class="off">
               BRAND
-              <span class="material-symbols-outlined"> arrow_forward_ios </span>
+              <span class="material-symbols-outlined">arrow_forward_ios</span>
             </div>
             <ul class="drop">
               <li>HISTORY</li>
@@ -34,7 +37,7 @@
           <button>
             <div class="off">
               MENU
-              <span class="material-symbols-outlined"> arrow_forward_ios </span>
+              <span class="material-symbols-outlined">arrow_forward_ios</span>
             </div>
             <ul class="drop">
               <li>ALL</li>
@@ -48,7 +51,7 @@
           <button>
             <div class="off">
               EVENT
-              <span class="material-symbols-outlined"> arrow_forward_ios </span>
+              <span class="material-symbols-outlined">arrow_forward_ios</span>
             </div>
             <ul class="drop">
               <li>프로모션</li>
@@ -61,7 +64,7 @@
           <button>
             <div class="off">
               ORDER
-              <span class="material-symbols-outlined"> arrow_forward_ios </span>
+              <span class="material-symbols-outlined">arrow_forward_ios</span>
             </div>
             <ul class="drop">
               <li>케이터링</li>
@@ -84,27 +87,62 @@
           </button>
         </nav>
       </div>
+      <div class="m_h">
+        <nav>
+          <div class="side_nav">
+            <button><div class="off">DUNKIN' OF MONTH</div></button>
+            <button>
+              <div>BRAND</div>
+              <ul>
+                <li>HISTORY</li>
+                <li>DD COMMITMENT</li>
+              </ul>
+            </button>
+            <button>
+              <div>MENU</div>
+              <ul>
+                <li>ALL</li>
+                <li>DONUT</li>
+                <li>FOOD</li>
+                <li>COFFEE</li>
+                <li>BEVERAGE</li>
+                <li>SNACK & MORE</li>
+              </ul>
+            </button>
+          </div>
+          <h1>
+            <a href="#">
+              <img src="./img/logo_mobile-1833920b.png" alt="로고" />
+            </a>
+          </h1>
+          <div class="side_nav">
+            <button>
+              <div>EVENT</div>
+              <ul class="drop">
+                <li>프로모션</li>
+                <li>제휴혜택</li>
+              </ul>
+            </button>
+            <button>
+              <div>STORE</div>
+            </button>
+            <button>
+              <div>ORDER</div>
+              <ul>
+                <li>케이터링</li>
+                <li>딜리버리</li>
+                <li>선물하기</li>
+              </ul>
+            </button>
+            <button>
+              <div>
+                <a href="#">창업문의</a>
+              </div>
+            </button>
+          </div>
+        </nav>
+      </div>
     </header>
     <section></section>
-    <script>
-      document.querySelectorAll("header button").forEach((button) => {
-        button.addEventListener("click", () => {
-          const drop = button.querySelector(".drop");
-          const icon = button.querySelector(".material-symbols-outlined");
-
-          if (drop) {
-            if (button.classList.contains("active")) {
-              drop.style.height = "0";
-              button.classList.remove("active");
-              if (icon) icon.classList.remove("rotate-270");
-            } else {
-              drop.style.height = `${drop.scrollHeight}px`;
-              button.classList.add("active");
-              if (icon) icon.classList.add("rotate-270");
-            }
-          }
-        });
-      });
-    </script>
   </body>
 </html>

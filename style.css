@@ -28,31 +28,103 @@ header {
   top: 0;
   background: url(./img/header_bg-63efc11c.png);
   background-position: bottom;
-  height: 56px;
+  height: clamp(60px, 6vw, 92px);
   z-index: 1;
 }
-header img {
+header .m_h {
+  width: 100%;
+  max-width: 1920px;
+  height: clamp(60px, 6vw, 92px);
+  display: flex;
+  justify-content: center;
+  padding: 0 10px;
+  word-spacing: -5px;
+  font-weight: bold;
+  position: relative;
+}
+header .m_h nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+}
+header .m_h nav .side_nav {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+header .m_h nav button {
+  all: unset;
+  cursor: pointer;
+}
+header .m_h nav button:hover {
+  color: purple;
+}
+header .m_h nav button:hover ul {
+  height: 50px;
+}
+header .m_h nav button ul {
+  position: absolute;
+  top: clamp(60px, 6vw, 92px);
+  line-height: 50px;
+  display: flex;
+  height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+header .m_h h1 {
+  height: clamp(60px, 6vw, 92px);
+  position: relative;
+  top: 5%;
+  z-index: 2;
+}
+header .m_h h1 img {
   height: 100%;
 }
-header .h_w {
+header .s_h {
   width: 100%;
   max-width: 1920px;
   height: clamp(60px, 6vw, 92px);
   display: flex;
   justify-content: center;
 }
-header nav {
+@media screen and (min-width: 1000px) {
+  header .s_h {
+    display: none;
+  }
+}
+header .s_h h1 {
+  position: relative;
+  top: 5%;
+  z-index: 2;
+}
+header .s_h .material-symbols-outlined {
+  font-size: 28px;
+}
+header .s_h .close {
+  line-height: 60px;
+  position: absolute;
+  right: 10px;
+}
+header .s_h img {
+  height: 100%;
+}
+header .s_h nav {
   position: absolute;
   top: clamp(60px, 6vw, 92px);
   width: 100%;
   height: calc(100vh - clamp(60px, 6vw, 92px));
   min-height: 500px;
   background-color: white;
-  padding: 20px;
-  padding-top: 50px;
+  overflow: hidden;
   color: #3d332e;
+  transition-duration: 1s;
+  padding: 0 50px;
 }
-header button {
+header .s_h nav button {
   all: unset;
   width: 100%;
   padding: 20px 0;
@@ -61,18 +133,21 @@ header button {
   cursor: pointer;
   border-bottom: 1px solid rgb(228, 228, 228);
 }
-header button .off {
+header .s_h nav button:nth-of-type(1) {
+  margin-top: 50px;
+}
+header .s_h nav button .off {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 10px 0;
 }
-header button .link {
+header .s_h nav button .link {
   width: 150px;
   display: flex;
   justify-content: space-between;
 }
-header button a {
+header .s_h nav button a {
   color: white;
   background-color: rgb(250, 126, 24);
   border-radius: 30px;
@@ -80,26 +155,27 @@ header button a {
   line-height: 34px;
   padding: 0 20px;
 }
-header .drop {
+header .s_h nav button .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+  transform: rotate(90deg);
+}
+header .s_h nav button .active .drop {
+  height: auto;
+}
+header .s_h nav button .rotate-270 {
+  transform: rotate(270deg);
+}
+header .s_h nav button .drop {
   position: relative;
   height: 0;
   overflow: hidden;
   transition: 0.3s ease;
   margin: 0 10px;
   font-size: 16px;
+  font-family: "Pretendard-Regular";
 }
-header .drop li {
+header .s_h nav button .drop li {
   padding: 10px;
-}
-header .active .drop {
-  height: auto;
-}
-header .material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-  font-size: 20px;
-  transition: transform 0.3s ease;
-  transform: rotate(90deg);
-}
-header .rotate-270 {
-  transform: rotate(270deg);
 }/*# sourceMappingURL=style.css.map */

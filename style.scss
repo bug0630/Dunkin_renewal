@@ -28,82 +28,155 @@ header {
   top: 0;
   background: url(./img/header_bg-63efc11c.png);
   background-position: bottom;
-  height: 56px;
+  height: $header-height;
   z-index: 1;
-
-  img {
-    height: 100%;
-  }
-  .h_w {
+  .m_h {
     width: 100%;
     max-width: 1920px;
     height: $header-height;
     display: flex;
     justify-content: center;
-  }
-  nav {
-    position: absolute;
-    top: $header-height;
-    width: 100%;
-    height: calc(100vh - $header-height);
-    min-height: 500px;
-    background-color: white;
-    padding: 20px;
-    padding-top: 50px;
-    color: #3d332e;
-  }
-
-  button {
-    all: unset;
-    width: 100%;
-    padding: 20px 0;
-    font-size: 24px;
+    padding: 0 10px;
+    word-spacing: -5px;
     font-weight: bold;
-    cursor: pointer;
-    border-bottom: 1px solid rgb(228, 228, 228);
-
-    .off {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 10px 0;
-    }
-    .link {
-      width: 150px;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    a {
-      color: white;
-      background-color: rgb(250, 126, 24);
-      border-radius: 30px;
-      font-size: 14px;
-      line-height: 34px;
-      padding: 0 20px;
-    }
-  }
-  .drop {
     position: relative;
-    height: 0;
-    overflow: hidden;
-    transition: 0.3s ease;
-    margin: 0 10px;
-    font-size: 16px;
-    li {
-      padding: 10px;
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      font-size: 14px;
+      .side_nav {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+      }
+      button {
+        all: unset;
+        cursor: pointer;
+
+        &:hover {
+          color: purple;
+        }
+        &:hover ul {
+          height: 50px;
+        }
+        ul {
+          position: absolute;
+          top: $header-height;
+          line-height: 50px;
+          display: flex;
+          height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease;
+        }
+      }
+    }
+    h1 {
+      height: $header-height;
+      position: relative;
+      top: 5%;
+      z-index: 2;
+      img {
+        height: 100%;
+      }
     }
   }
-  .active .drop {
-    height: auto;
-  }
-  .material-symbols-outlined {
-    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-    font-size: 20px;
-    transition: transform 0.3s ease;
-    transform: rotate(90deg);
-  }
-  .rotate-270 {
-    transform: rotate(270deg);
+  .s_h {
+    width: 100%;
+    max-width: 1920px;
+    height: $header-height;
+    display: flex;
+    justify-content: center;
+    @media screen and (min-width: 1000px) {
+      display: none;
+    }
+    h1 {
+      position: relative;
+      top: 5%;
+      z-index: 2;
+    }
+    .material-symbols-outlined {
+      font-size: 28px;
+    }
+    .close {
+      line-height: 60px;
+      position: absolute;
+      right: 10px;
+    }
+    img {
+      height: 100%;
+    }
+    nav {
+      position: absolute;
+      top: $header-height;
+      width: 100%;
+      height: calc(100vh - $header-height);
+      min-height: 500px;
+      background-color: white;
+      overflow: hidden;
+      color: #3d332e;
+      transition-duration: 1s;
+      padding: 0 50px;
+      button {
+        all: unset;
+        width: 100%;
+        padding: 20px 0;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        border-bottom: 1px solid rgb(228, 228, 228);
+        &:nth-of-type(1) {
+          margin-top: 50px;
+        }
+        .off {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 10px 0;
+        }
+        .link {
+          width: 150px;
+          display: flex;
+          justify-content: space-between;
+        }
+
+        a {
+          color: white;
+          background-color: rgb(250, 126, 24);
+          border-radius: 30px;
+          font-size: 14px;
+          line-height: 34px;
+          padding: 0 20px;
+        }
+        .material-symbols-outlined {
+          font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+          font-size: 20px;
+          transition: transform 0.3s ease;
+          transform: rotate(90deg);
+        }
+        .active .drop {
+          height: auto;
+        }
+
+        .rotate-270 {
+          transform: rotate(270deg);
+        }
+        .drop {
+          position: relative;
+          height: 0;
+          overflow: hidden;
+          transition: 0.3s ease;
+          margin: 0 10px;
+          font-size: 16px;
+          font-family: "Pretendard-Regular";
+          li {
+            padding: 10px;
+          }
+        }
+      }
+    }
   }
 }
