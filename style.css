@@ -42,6 +42,19 @@ header .m_h {
   font-weight: bold;
   position: relative;
 }
+@media screen and (max-width: 999px) {
+  header .m_h {
+    display: none;
+  }
+}
+header .m_h .depth {
+  position: absolute;
+  top: clamp(60px, 6vw, 92px);
+  width: 100%;
+  height: 0;
+  background-color: rgba(128, 128, 11, 0.2);
+  transition: height 0.3s ease;
+}
 header .m_h nav {
   width: 100%;
   display: flex;
@@ -56,15 +69,19 @@ header .m_h nav .side_nav {
   align-items: center;
   text-align: center;
 }
+header .m_h nav .right ul {
+  left: 70%;
+}
 header .m_h nav button {
   all: unset;
   cursor: pointer;
+  padding: 40px 20px;
 }
-header .m_h nav button:hover {
+header .m_h nav button:hover div {
   color: purple;
 }
-header .m_h nav button:hover ul {
-  height: 50px;
+header .m_h nav button:hover li {
+  color: initial;
 }
 header .m_h nav button ul {
   position: absolute;
@@ -74,6 +91,28 @@ header .m_h nav button ul {
   height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
+}
+header .m_h nav button ul li {
+  padding: 0 20px;
+}
+header .m_h nav button ul li:hover {
+  color: purple;
+}
+header .m_h nav .e_ship {
+  background-color: rgb(92, 3, 92);
+  color: white;
+  padding: 5px 20px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .m_h nav .e_ship:hover .material-symbols-outlined {
+  transform: translateX(1px);
+}
+header .m_h nav .e_ship .material-symbols-outlined {
+  position: relative;
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 header .m_h h1 {
   height: clamp(60px, 6vw, 92px);

@@ -1,76 +1,6 @@
 // document.addEventListener("DOMContentLoaded", function () {
 //   const header = document.querySelector("header");
-//   header.innerHTML = `
-//     <div class="h_w">
-//         <h1>
-//             <a href="#">
-//                 <img src="./img/logo_mobile-1833920b.png" alt="로고" />
-//             </a>
-//         </h1>
-//         <span class="material-symbols-outlined close">close</span>
-//         <nav>
-//             <button><div class="off">DUNKIN' OF MONTH</div></button>
-//             <button>
-//                 <div class="off">
-//                     BRAND
-//                     <span class="material-symbols-outlined">arrow_forward_ios</span>
-//                 </div>
-//                 <ul class="drop">
-//                     <li>HISTORY</li>
-//                     <li>DD COMMITMENT</li>
-//                 </ul>
-//             </button>
-//             <button>
-//                 <div class="off">
-//                     MENU
-//                     <span class="material-symbols-outlined">arrow_forward_ios</span>
-//                 </div>
-//                 <ul class="drop">
-//                     <li>ALL</li>
-//                     <li>DONUT</li>
-//                     <li>FOOD</li>
-//                     <li>COFFEE</li>
-//                     <li>BEVERAGE</li>
-//                     <li>SNACK & MORE</li>
-//                 </ul>
-//             </button>
-//             <button>
-//                 <div class="off">
-//                     EVENT
-//                     <span class="material-symbols-outlined">arrow_forward_ios</span>
-//                 </div>
-//                 <ul class="drop">
-//                     <li>프로모션</li>
-//                     <li>제휴혜택</li>
-//                 </ul>
-//             </button>
-//             <button>
-//                 <div class="off">STORE</div>
-//             </button>
-//             <button>
-//                 <div class="off">
-//                     ORDER
-//                     <span class="material-symbols-outlined">arrow_forward_ios</span>
-//                 </div>
-//                 <ul class="drop">
-//                     <li>케이터링</li>
-//                     <li>딜리버리</li>
-//                     <li>선물하기</li>
-//                 </ul>
-//             </button>
-//             <button>
-//                 <div class="off">
-//                     <div class="link">
-//                         <img src="./img/header_instagram-17093e04.svg" alt="instargram" />
-//                         <img src="./img/header_youtube-6df669ee.svg" alt="youtube" />
-//                         <img src="./img/header_blog-0f429453.svg" alt="blog" />
-//                     </div>
-//                     <a href="#">창업문의</a>
-//                 </div>
-//             </button>
-//         </nav>
-//     </div>
-//     `;
+//   header.innerHTML = ``;
 // });
 document.addEventListener("DOMContentLoaded", function () {
   // 버튼 클릭 이벤트
@@ -115,4 +45,58 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
+});
+
+// 헤더 nav hover 이벤트
+document.addEventListener("DOMContentLoaded", function () {
+  const nav = document.querySelector(".m_h nav");
+  const depth = nav.querySelector(".depth");
+
+  if (depth) {
+    const buttons = nav.querySelectorAll("button.down");
+
+    buttons.forEach((button) => {
+      const ul = button.querySelector("ul");
+
+      button.addEventListener("mouseenter", function () {
+        // 다른 모든 ul 요소의 높이를 0으로 설정
+        buttons.forEach((btn) => {
+          if (btn !== button) {
+            const otherUl = btn.querySelector("ul");
+            if (otherUl) otherUl.style.height = "0";
+          }
+        });
+
+        depth.style.height = "50px";
+        if (ul) ul.style.height = "50px";
+      });
+
+      button.addEventListener("mouseleave", function (event) {
+        if (
+          !button.contains(event.relatedTarget) &&
+          !depth.contains(event.relatedTarget)
+        ) {
+          depth.style.height = "0";
+          if (ul) ul.style.height = "0";
+        }
+      });
+
+      depth.addEventListener("mouseenter", function () {
+        depth.style.height = "50px";
+      });
+
+      depth.addEventListener("mouseleave", function (event) {
+        let insideButton = false;
+        buttons.forEach((btn) => {
+          if (btn.contains(event.relatedTarget)) {
+            insideButton = true;
+          }
+        });
+        if (!insideButton && !depth.contains(event.relatedTarget)) {
+          depth.style.height = "0";
+          if (ul) ul.style.height = "0";
+        }
+      });
+    });
+  }
 });
