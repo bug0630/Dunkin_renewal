@@ -24,24 +24,24 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Close 버튼 클릭 이벤트
-  const closeButton = document.querySelector(
-    ".material-symbols-outlined.close"
-  );
-  closeButton.addEventListener("click", () => {
+  const menuButton = document.querySelector(".material-symbols-outlined.menu");
+
+  menuButton.addEventListener("click", () => {
     const nav = document.querySelector("nav");
-    const icons = document.querySelectorAll("nav .material-symbols-outlined");
 
     if (nav) {
-      if (closeButton.classList.contains("closed")) {
-        nav.style.height = `${nav.scrollHeight}px`;
-        nav.style.minHeight = "500px"; // 최소 높이 복원
-        closeButton.textContent = "close";
-        closeButton.classList.remove("closed");
-      } else {
+      if (menuButton.classList.contains("close")) {
         nav.style.height = "0";
         nav.style.minHeight = "0";
-        closeButton.textContent = "menu";
-        closeButton.classList.add("closed");
+        menuButton.textContent = "menu";
+        menuButton.classList.remove("close");
+        menuButton.classList.add("menu");
+      } else {
+        nav.style.height = `${nav.scrollHeight}px`;
+        nav.style.minHeight = "500px"; // 최소 높이 복원
+        menuButton.textContent = "close";
+        menuButton.classList.remove("menu");
+        menuButton.classList.add("close");
       }
     }
   });

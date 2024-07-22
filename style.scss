@@ -52,6 +52,7 @@ header {
       height: 0;
       background-color: rgba(128, 128, 11, 0.2);
       transition: height 0.3s ease;
+
       // -----------------------------------
     }
     nav {
@@ -66,6 +67,10 @@ header {
         justify-content: space-around;
         align-items: center;
         text-align: center;
+        font-size: 16px;
+        @media screen and (min-width: 1200px) {
+          font-size: 20px;
+        }
       }
       .right ul {
         left: 70%;
@@ -98,9 +103,10 @@ header {
         }
       }
       .e_ship {
-        background-color: rgb(92, 3, 92);
+        background-color: #c43663;
+        font-size: 12px;
         color: white;
-        padding: 5px 20px;
+        padding: 3px 10px 3px 3px;
         border-radius: 30px;
         display: flex;
         justify-content: space-between;
@@ -110,7 +116,9 @@ header {
         }
 
         .material-symbols-outlined {
+          font-size: 20px;
           position: relative;
+          padding-right: 10px;
           font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
         }
       }
@@ -143,6 +151,7 @@ header {
     .material-symbols-outlined {
       font-size: 28px;
     }
+    .menu,
     .close {
       line-height: 60px;
       position: absolute;
@@ -155,8 +164,7 @@ header {
       position: absolute;
       top: $header-height;
       width: 100%;
-      height: calc(100vh - $header-height);
-      min-height: 500px;
+      height: 0;
       background-color: white;
       overflow: hidden;
       color: #3d332e;

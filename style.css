@@ -68,6 +68,12 @@ header .m_h nav .side_nav {
   justify-content: space-around;
   align-items: center;
   text-align: center;
+  font-size: 16px;
+}
+@media screen and (min-width: 1200px) {
+  header .m_h nav .side_nav {
+    font-size: 20px;
+  }
 }
 header .m_h nav .right ul {
   left: 70%;
@@ -99,9 +105,10 @@ header .m_h nav button ul li:hover {
   color: purple;
 }
 header .m_h nav .e_ship {
-  background-color: rgb(92, 3, 92);
+  background-color: #c43663;
+  font-size: 12px;
   color: white;
-  padding: 5px 20px;
+  padding: 3px 10px 3px 3px;
   border-radius: 30px;
   display: flex;
   justify-content: space-between;
@@ -111,7 +118,9 @@ header .m_h nav .e_ship:hover .material-symbols-outlined {
   transform: translateX(1px);
 }
 header .m_h nav .e_ship .material-symbols-outlined {
+  font-size: 20px;
   position: relative;
+  padding-right: 10px;
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 header .m_h h1 {
@@ -143,6 +152,7 @@ header .s_h h1 {
 header .s_h .material-symbols-outlined {
   font-size: 28px;
 }
+header .s_h .menu,
 header .s_h .close {
   line-height: 60px;
   position: absolute;
@@ -155,8 +165,7 @@ header .s_h nav {
   position: absolute;
   top: clamp(60px, 6vw, 92px);
   width: 100%;
-  height: calc(100vh - clamp(60px, 6vw, 92px));
-  min-height: 500px;
+  height: 0;
   background-color: white;
   overflow: hidden;
   color: #3d332e;
