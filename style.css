@@ -33,7 +33,8 @@ header {
 }
 header .m_h {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1800px;
+  margin: 0 auto;
   height: clamp(60px, 6vw, 92px);
   display: flex;
   justify-content: center;
@@ -50,7 +51,7 @@ header .m_h {
 header .m_h .depth {
   position: absolute;
   top: clamp(60px, 6vw, 92px);
-  width: 100%;
+  width: 100vw;
   height: 0;
   background-color: rgba(128, 128, 11, 0.2);
   transition: height 0.3s ease;
@@ -84,7 +85,7 @@ header .m_h nav button {
   padding: 40px 20px;
 }
 header .m_h nav button:hover div {
-  color: purple;
+  color: #c43663;
 }
 header .m_h nav button:hover li {
   color: initial;
@@ -197,7 +198,7 @@ header .s_h nav button .link {
 }
 header .s_h nav button a {
   color: white;
-  background-color: rgb(250, 126, 24);
+  background-color: #fc7823;
   border-radius: 30px;
   font-size: 14px;
   line-height: 34px;

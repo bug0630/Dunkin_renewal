@@ -12,6 +12,8 @@
   font-style: normal;
 }
 $header-height: clamp(60px, 6vw, 92px);
+$sub-color: #c43663;
+$main-color: #fc7823;
 
 * {
   box-sizing: border-box;
@@ -33,7 +35,8 @@ header {
   // max-width헤더
   .m_h {
     width: 100%;
-    max-width: 1920px;
+    max-width: 1800px;
+    margin: 0 auto;
     height: $header-height;
     display: flex;
     justify-content: center;
@@ -48,7 +51,7 @@ header {
     .depth {
       position: absolute;
       top: $header-height;
-      width: 100%;
+      width: 100vw;
       height: 0;
       background-color: rgba(128, 128, 11, 0.2);
       transition: height 0.3s ease;
@@ -81,7 +84,7 @@ header {
         cursor: pointer;
         padding: 40px 20px;
         &:hover div {
-          color: purple;
+          color: $sub-color;
         }
         &:hover li {
           color: initial;
@@ -103,7 +106,7 @@ header {
         }
       }
       .e_ship {
-        background-color: #c43663;
+        background-color: $sub-color;
         font-size: 12px;
         color: white;
         padding: 3px 10px 3px 3px;
@@ -195,7 +198,7 @@ header {
 
         a {
           color: white;
-          background-color: rgb(250, 126, 24);
+          background-color: $main-color;
           border-radius: 30px;
           font-size: 14px;
           line-height: 34px;
