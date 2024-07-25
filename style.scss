@@ -31,7 +31,7 @@ header {
   background: url(./img/header_bg-63efc11c.png);
   background-position: bottom;
   height: $header-height;
-  z-index: 1;
+  z-index: 10;
   // max-width헤더
   .m_h {
     width: 100%;
@@ -236,34 +236,35 @@ header {
 .main_banner {
   width: 100%;
   overflow: hidden;
-  background: url(./img/top-bg-63cd294e.png);
   padding: 50px;
-  position: relative;
-  .butter {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 70px 60px;
-    overflow: hidden;
-
-    img {
-      width: 100%;
-      border-radius: 5vw;
-    }
-  }
-  .frame {
+  background: url(./img/top-bg-63cd294e.png);
+  .frame_box {
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
     position: relative;
-    z-index: 2;
+  }
+  .butter {
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 1920px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     img {
       width: 100%;
+      border-radius: 10%;
+    }
+  }
+  .frame {
+    width: 100%;
+    display: block;
+    position: absolute;
+    z-index: 2;
+    img {
+      width: 80%;
     }
   }
 }

@@ -29,7 +29,7 @@ header {
   background: url(./img/header_bg-63efc11c.png);
   background-position: bottom;
   height: clamp(60px, 6vw, 92px);
-  z-index: 1;
+  z-index: 10;
 }
 header .m_h {
   width: 100%;
@@ -232,35 +232,37 @@ header .s_h nav button .drop li {
 .main_banner {
   width: 100%;
   overflow: hidden;
-  background: url(./img/top-bg-63cd294e.png);
   padding: 50px;
-  position: relative;
+  background: url(./img/top-bg-63cd294e.png);
 }
-.main_banner .butter {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 70px 60px;
-  overflow: hidden;
-}
-.main_banner .butter img {
-  width: 100%;
-  border-radius: 5vw;
-}
-.main_banner .frame {
+.main_banner .frame_box {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
   position: relative;
+}
+.main_banner .butter {
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.main_banner .butter img {
+  width: 100%;
+  border-radius: 10%;
+}
+.main_banner .frame {
+  width: 100%;
+  display: block;
+  position: absolute;
   z-index: 2;
 }
 .main_banner .frame img {
-  width: 100%;
+  width: 80%;
 }
 
 .event {
