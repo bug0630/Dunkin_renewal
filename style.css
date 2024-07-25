@@ -237,7 +237,7 @@ header .s_h nav button .drop li {
 }
 .main_banner .frame_box {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1600px;
   margin: 0 auto;
   position: relative;
 }
@@ -245,15 +245,30 @@ header .s_h nav button .drop li {
   top: 0;
   left: 0;
   width: 100%;
-  max-width: 1920px;
+  max-width: 1600px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
+@media screen and (max-width: 800px) {
+  .main_banner .butter {
+    padding: 6vw;
+  }
+}
 .main_banner .butter img {
   width: 100%;
-  border-radius: 10%;
+  border-radius: 5vw;
+}
+@media screen and (max-width: 1200px) {
+  .main_banner .butter img {
+    border-radius: 8vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main_banner .butter img {
+    border-radius: 4vw;
+  }
 }
 .main_banner .frame {
   width: 100%;
