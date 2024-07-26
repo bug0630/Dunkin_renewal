@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Pretendard-Regular";
   src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
@@ -16,6 +17,11 @@
 
 body {
   font-family: "Dunkin Sans", "Pretendard-Regular";
+  scroll-behavior: smooth; /* 부드러운 스크롤 추가 */
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
 
 a {
@@ -42,6 +48,7 @@ header .m_h {
   word-spacing: -5px;
   font-weight: bold;
   position: relative;
+  font-size: 20px;
 }
 @media screen and (max-width: 999px) {
   header .m_h {
@@ -60,7 +67,7 @@ header .m_h nav {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  font-size: 14px;
+  font-size: 1rem;
 }
 header .m_h nav .side_nav {
   width: 40%;
@@ -69,11 +76,11 @@ header .m_h nav .side_nav {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  font-size: 16px;
+  font-size: 0.8rem;
 }
 @media screen and (min-width: 1200px) {
   header .m_h nav .side_nav {
-    font-size: 20px;
+    font-size: 1.2rem;
   }
 }
 header .m_h nav .right ul {
@@ -101,19 +108,25 @@ header .m_h nav button ul {
 }
 header .m_h nav button ul li {
   padding: 0 20px;
+  font-family: "Pretendard-Regular";
 }
 header .m_h nav button ul li:hover {
   color: purple;
 }
 header .m_h nav .e_ship {
   background-color: #c43663;
-  font-size: 12px;
   color: white;
-  padding: 3px 10px 3px 3px;
+  padding: 8px 20px 8px 5px;
   border-radius: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid rgb(185, 185, 185);
+}
+@media screen and (max-width: 1200px) {
+  header .m_h nav .e_ship {
+    padding: 2px 10px 2px 5px;
+  }
 }
 header .m_h nav .e_ship:hover .material-symbols-outlined {
   transform: translateX(1px);
@@ -121,7 +134,7 @@ header .m_h nav .e_ship:hover .material-symbols-outlined {
 header .m_h nav .e_ship .material-symbols-outlined {
   font-size: 20px;
   position: relative;
-  padding-right: 10px;
+  padding-right: 5px;
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 header .m_h h1 {
@@ -170,8 +183,9 @@ header .s_h nav {
   background-color: white;
   overflow: hidden;
   color: #3d332e;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   padding: 0 50px;
+  overflow-y: auto;
 }
 header .s_h nav button {
   all: unset;
@@ -245,7 +259,6 @@ header .s_h nav button .drop li {
   top: 0;
   left: 0;
   width: 100%;
-  max-width: 1600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -253,12 +266,12 @@ header .s_h nav button .drop li {
 }
 @media screen and (max-width: 800px) {
   .main_banner .butter {
-    padding: 6vw;
+    padding: 5.5vw;
   }
 }
 .main_banner .butter img {
   width: 100%;
-  border-radius: 5vw;
+  border-radius: 4vw;
 }
 @media screen and (max-width: 1200px) {
   .main_banner .butter img {

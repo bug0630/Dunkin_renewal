@@ -3,7 +3,7 @@
 //   header.innerHTML = ``;
 // });
 document.addEventListener("DOMContentLoaded", function () {
-  // 버튼 클릭 이벤트
+  // nav 버튼 클릭
   document.querySelectorAll("header button").forEach((button) => {
     button.addEventListener("click", () => {
       const drop = button.querySelector(".drop");
@@ -28,26 +28,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
   menuButton.addEventListener("click", () => {
     const nav = document.querySelector("nav");
+    const body = document.querySelector("body");
+    const getHeaderHeight = () => {
+      const headerHeight = clamp(60, window.innerHeight * 0.06, 92);
+      return headerHeight;
+    };
+
+    // clamp 함수 구현
+    const clamp = (min, val, max) => Math.min(Math.max(val, min), max);
 
     if (nav) {
       if (menuButton.classList.contains("close")) {
         nav.style.height = "0";
-        nav.style.minHeight = "0";
         menuButton.textContent = "menu";
         menuButton.classList.remove("close");
         menuButton.classList.add("menu");
+        body.classList.remove("no-scroll");
       } else {
-        nav.style.height = `${nav.scrollHeight}px`;
-        nav.style.minHeight = "500px"; // 최소 높이 복원
+        const headerHeight = getHeaderHeight();
+        nav.style.height = `100vh`;
         menuButton.textContent = "close";
         menuButton.classList.remove("menu");
         menuButton.classList.add("close");
+        nav.style.height = `calc(100vh - ${headerHeight}px)`;
+        body.classList.add("no-scroll");
       }
     }
   });
 });
 
-// 헤더 nav hover 이벤트
+// 헤더 nav drop
 document.addEventListener("DOMContentLoaded", function () {
   const nav = document.querySelector(".m_h nav");
   const depth = nav.querySelector(".depth");
@@ -59,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const ul = button.querySelector("ul");
 
       button.addEventListener("mouseenter", function () {
-        // 다른 모든 ul 요소의 높이를 0으로 설정
         buttons.forEach((btn) => {
           if (btn !== button) {
             const otherUl = btn.querySelector("ul");
