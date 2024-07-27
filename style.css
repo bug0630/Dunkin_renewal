@@ -24,6 +24,20 @@ body.no-scroll {
   overflow: hidden;
 }
 
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #fc7823;
+  border: 2px solid #b3a7a7;
+  border-radius: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 a {
   all: unset;
 }
