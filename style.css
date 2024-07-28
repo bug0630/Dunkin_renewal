@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Pretendard-Regular";
   src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
@@ -17,251 +16,25 @@
 
 body {
   font-family: "Dunkin Sans", "Pretendard-Regular";
-  scroll-behavior: smooth; /* 부드러운 스크롤 추가 */
 }
 
 body.no-scroll {
   overflow: hidden;
 }
 
-body::-webkit-scrollbar {
-  width: 12px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: #fc7823;
-  border: 2px solid #b3a7a7;
-  border-radius: 12px;
-}
-
-body::-webkit-scrollbar-track {
-  background: transparent;
-}
-
 a {
   all: unset;
-}
-
-header {
-  width: 100%;
-  position: sticky;
-  top: 0;
-  background: url(./img/header_bg-63efc11c.png);
-  background-position: bottom;
-  height: clamp(60px, 6vw, 92px);
-  z-index: 10;
-}
-header .m_h {
-  width: 100%;
-  max-width: 1800px;
-  margin: 0 auto;
-  height: clamp(60px, 6vw, 92px);
-  display: flex;
-  justify-content: center;
-  padding: 0 10px;
-  word-spacing: -5px;
-  font-weight: bold;
-  position: relative;
-  font-size: 20px;
-}
-@media screen and (max-width: 999px) {
-  header .m_h {
-    display: none;
-  }
-}
-header .m_h .depth {
-  position: absolute;
-  top: clamp(60px, 6vw, 92px);
-  width: 100vw;
-  height: 0;
-  background-color: rgba(128, 128, 11, 0.2);
-  transition: height 0.3s ease;
-}
-header .m_h nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  font-size: 1rem;
-}
-header .m_h nav .side_nav {
-  width: 40%;
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  font-size: 0.8rem;
-}
-@media screen and (min-width: 1200px) {
-  header .m_h nav .side_nav {
-    font-size: 1.2rem;
-  }
-}
-header .m_h nav .right ul {
-  left: 70%;
-}
-header .m_h nav button {
-  all: unset;
-  cursor: pointer;
-  padding: 40px 20px;
-}
-header .m_h nav button:hover div {
-  color: #c43663;
-}
-header .m_h nav button:hover li {
-  color: initial;
-}
-header .m_h nav button ul {
-  position: absolute;
-  top: clamp(60px, 6vw, 92px);
-  line-height: 50px;
-  display: flex;
-  height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-}
-header .m_h nav button ul li {
-  padding: 0 20px;
-  font-family: "Pretendard-Regular";
-}
-header .m_h nav button ul li:hover {
-  color: purple;
-}
-header .m_h nav .e_ship {
-  background-color: #c43663;
-  color: white;
-  padding: 8px 20px 8px 5px;
-  border-radius: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid rgb(185, 185, 185);
-}
-@media screen and (max-width: 1200px) {
-  header .m_h nav .e_ship {
-    padding: 2px 10px 2px 5px;
-  }
-}
-header .m_h nav .e_ship:hover .material-symbols-outlined {
-  transform: translateX(1px);
-}
-header .m_h nav .e_ship .material-symbols-outlined {
-  font-size: 20px;
-  position: relative;
-  padding-right: 5px;
-  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
-}
-header .m_h h1 {
-  height: clamp(60px, 6vw, 92px);
-  position: relative;
-  top: 5%;
-  z-index: 2;
-}
-header .m_h h1 img {
-  height: 100%;
-}
-header .s_h {
-  width: 100%;
-  max-width: 1920px;
-  height: clamp(60px, 6vw, 92px);
-  display: flex;
-  justify-content: center;
-}
-@media screen and (min-width: 1000px) {
-  header .s_h {
-    display: none;
-  }
-}
-header .s_h h1 {
-  position: relative;
-  top: 5%;
-  z-index: 2;
-}
-header .s_h .material-symbols-outlined {
-  font-size: 28px;
-}
-header .s_h .menu,
-header .s_h .close {
-  line-height: 60px;
-  position: absolute;
-  right: 10px;
-}
-header .s_h img {
-  height: 100%;
-}
-header .s_h nav {
-  position: absolute;
-  top: clamp(60px, 6vw, 92px);
-  width: 100%;
-  height: 0;
-  background-color: white;
-  overflow: hidden;
-  color: #3d332e;
-  transition-duration: 0.5s;
-  padding: 0 50px;
-  overflow-y: auto;
-}
-header .s_h nav button {
-  all: unset;
-  width: 100%;
-  padding: 20px 0;
-  font-size: 24px;
-  font-weight: bold;
-  cursor: pointer;
-  border-bottom: 1px solid rgb(228, 228, 228);
-}
-header .s_h nav button:nth-of-type(1) {
-  margin-top: 50px;
-}
-header .s_h nav button .off {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px 0;
-}
-header .s_h nav button .link {
-  width: 150px;
-  display: flex;
-  justify-content: space-between;
-}
-header .s_h nav button a {
-  color: white;
-  background-color: #fc7823;
-  border-radius: 30px;
-  font-size: 14px;
-  line-height: 34px;
-  padding: 0 20px;
-}
-header .s_h nav button .material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-  font-size: 20px;
-  transition: transform 0.3s ease;
-  transform: rotate(90deg);
-}
-header .s_h nav button .active .drop {
-  height: auto;
-}
-header .s_h nav button .rotate-270 {
-  transform: rotate(270deg);
-}
-header .s_h nav button .drop {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  transition: 0.3s ease;
-  margin: 0 10px;
-  font-size: 16px;
-  font-family: "Pretendard-Regular";
-}
-header .s_h nav button .drop li {
-  padding: 10px;
 }
 
 .main_banner {
   width: 100%;
   overflow: hidden;
-  padding: 50px;
   background: url(./img/top-bg-63cd294e.png);
+}
+@media screen and (min-width: 800px) {
+  .main_banner {
+    padding: 50px;
+  }
 }
 .main_banner .frame_box {
   width: 100%;
@@ -280,7 +53,7 @@ header .s_h nav button .drop li {
 }
 @media screen and (max-width: 800px) {
   .main_banner .butter {
-    padding: 5.5vw;
+    padding: 6vw;
   }
 }
 .main_banner .butter img {
@@ -294,7 +67,7 @@ header .s_h nav button .drop li {
 }
 @media screen and (max-width: 800px) {
   .main_banner .butter img {
-    border-radius: 4vw;
+    border-radius: 7vw;
   }
 }
 .main_banner .frame {
@@ -307,8 +80,15 @@ header .s_h nav button .drop li {
   width: 80%;
 }
 
-.event {
+.product {
   height: 500px;
   width: 100%;
-  background-color: aqua;
+  padding: 6vw;
+}
+.product .p_slide {
+  background-color: #ffea8c;
+  border-radius: 30px;
+}
+.product .p_slide img {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

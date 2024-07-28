@@ -9,6 +9,7 @@
     />
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./header.css" />
     <script src="./header.js" defer></script>
     <script src="./index.js" defer></script>
     <title>Dunkin'</title>
@@ -113,7 +114,13 @@
           </div>
           <h1>
             <a href="#">
-              <img src="./img/logo_mobile-1833920b.png" alt="로고" />
+              <picture>
+                <source
+                  media="(min-width: 1464px)"
+                  srcset="./img/logo-bc30d2d8.png"
+                />
+                <img src="./img/logo_mobile-1833920b.png" alt="로고" />
+              </picture>
             </a>
           </h1>
           <div class="side_nav right">
@@ -178,7 +185,14 @@
           </div>
         </picture>
       </div>
+      <div class="product">
+        <div class="p_slide">
+          <img
+            src="./img/Z8PohC1Ar1FNjf07fANFQErWc6732sP4fuRqIWT8.png"
+            alt="butter"
+          />
+        </div>
+      </div>
     </section>
-    <!-- <section class="event"></section> -->
   </body>
 </html>
