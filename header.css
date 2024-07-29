@@ -48,7 +48,7 @@ header .m_h {
   position: relative;
   font-size: 20px;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 976px) {
   header .m_h {
     display: none;
   }
@@ -60,6 +60,7 @@ header .m_h .depth {
   height: 0;
   background-color: rgba(252, 252, 252, 0.6);
   transition: height 0.3s ease;
+  font-size: 1rem;
 }
 header .m_h nav {
   width: 100%;
@@ -74,7 +75,7 @@ header .m_h nav .side_nav {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 @media screen and (min-width: 1360px) {
   header .m_h nav .side_nav {
@@ -120,10 +121,12 @@ header .m_h nav .e_ship {
   justify-content: space-between;
   align-items: center;
   border: 1px solid rgb(185, 185, 185);
+  font-size: 1rem;
 }
 @media screen and (max-width: 1360px) {
   header .m_h nav .e_ship {
     padding: 2px 10px 2px 5px;
+    font-size: 0.6rem;
   }
 }
 header .m_h nav .e_ship:hover .material-symbols-outlined {
@@ -151,7 +154,7 @@ header .s_h {
   display: flex;
   justify-content: center;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 977px) {
   header .s_h {
     display: none;
   }

@@ -29,11 +29,12 @@ a {
 .main_banner {
   width: 100%;
   overflow: hidden;
+  position: relative;
   background: url(./img/top-bg-63cd294e.png);
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
   .main_banner {
-    padding: 50px;
+    padding: 30px;
   }
 }
 .main_banner .frame_box {
@@ -51,7 +52,7 @@ a {
   align-items: center;
   overflow: hidden;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
   .main_banner .butter {
     padding: 6vw;
   }
@@ -60,14 +61,19 @@ a {
   width: 100%;
   border-radius: 4vw;
 }
-@media screen and (max-width: 1200px) {
-  .main_banner .butter img {
-    border-radius: 8vw;
-  }
-}
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
   .main_banner .butter img {
     border-radius: 7vw;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .main_banner .butter img {
+    border-radius: 9vw;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .main_banner .butter img {
+    border-radius: 8vw;
   }
 }
 .main_banner .frame {
@@ -81,9 +87,17 @@ a {
 }
 
 .product {
-  height: 500px;
   width: 100%;
   padding: 6vw;
+}
+@media screen and (min-width: 768px) {
+  .product {
+    position: absolute;
+    padding: 0;
+    width: 30vw;
+    right: 10%;
+    top: 10%;
+  }
 }
 .product .p_slide {
   background-color: #ffea8c;
