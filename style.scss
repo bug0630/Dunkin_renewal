@@ -95,4 +95,17 @@ a {
       width: 100%;
     }
   }
+  .beverage {
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    background-color: #fff9d5;
+    div {
+      width: 50%;
+      padding: 10px;
+    }
+    img {
+      width: 100%;
+    }
+  }
 }

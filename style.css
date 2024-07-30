@@ -105,4 +105,17 @@ a {
 }
 .product .p_slide img {
   width: 100%;
+}
+.product .beverage {
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  background-color: #fff9d5;
+}
+.product .beverage div {
+  width: 50%;
+  padding: 10px;
+}
+.product .beverage img {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
