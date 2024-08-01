@@ -75,68 +75,97 @@ a {
     display: block;
     position: absolute;
     z-index: 2;
-    img {
-      width: 80%;
+  }
+  .product {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 24px;
+    word-spacing: -0.5rem;
+    h3 {
+      font-size: 20px;
+      text-align: center;
+      @media screen and (min-width: 768px) {
+        font-size: 16px;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      width: 33vw;
+      height: 88%;
+      gap: 10px;
+      right: 5%;
+      font-size: 20px;
+    }
+    @media screen and (min-width: 1024px) {
+      position: absolute;
+      padding: 0;
+      width: 22vw;
+      max-width: 400px;
+      right: 3%;
+    }
+    @media screen and (min-width: 1444px) {
+      font-size: 24px;
+    }
+    .p_slide {
+      width: 100%;
+      aspect-ratio: 1/1;
+      background-color: #ffea8c;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      flex-direction: column;
+      padding: 10%;
+      color: #c79018;
+      @media screen and (min-width: 768px) {
+        padding: 5%;
+      }
+      span {
+        color: #8f5300;
+        font-weight: 800;
+      }
+
+      img {
+        width: 78%;
+      }
+    }
+    .month {
+      background-color: $sub-color;
+      padding: 16px 0;
+      color: white;
+      border-radius: 30px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.9em;
+    }
+    .beverage {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      border-radius: 30px;
+      padding: 5%;
+      background-color: #fff9d5;
+      @media screen and (min-width: 768px) {
+        font-size: 0.9em;
+      }
+      .beverage_title {
+        color: #5e4a2b;
+        font-weight: 800;
+      }
+      div {
+        width: 50%;
+      }
+      img {
+        width: 100%;
+      }
     }
   }
 }
-.product {
-  width: 100%;
-  display: flex;
-  gap: 50px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  @media screen and (min-width: 768px) {
-    position: absolute;
-    width: 33vw;
-    height: 88%;
-    gap: 10px;
-    right: 5%;
-  }
-  @media screen and (min-width: 1024px) {
-    position: absolute;
-    padding: 0;
-    width: 22vw;
-    right: 3%;
-  }
-  .p_slide {
-    width: 100%;
-    aspect-ratio: 1/1;
-    background-color: #ffea8c;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-    padding: 10%;
-    word-spacing: -0.5rem;
-    @media screen and (min-width: 1024px) {
-      padding: 5%;
-    }
-    img {
-      width: 80%;
-    }
-  }
-  .month {
-    background-color: orange;
-    border-radius: 30px;
-    width: 100%;
-    padding: 10px 0;
-    text-align: center;
-  }
-  .beverage {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    border-radius: 30px;
-    background-color: #fff9d5;
-    div {
-      width: 50%;
-      padding: 10px;
-    }
-    img {
-      width: 100%;
-    }
-  }
+.event {
+  height: 1000px;
 }

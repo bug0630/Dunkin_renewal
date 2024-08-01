@@ -84,73 +84,107 @@ a {
   position: absolute;
   z-index: 2;
 }
-.main_banner .frame img {
-  width: 80%;
-}
-
-.product {
+.main_banner .product {
   width: 100%;
   display: flex;
-  gap: 50px;
+  gap: 20px;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  font-size: 24px;
+  word-spacing: -0.5rem;
+}
+.main_banner .product h3 {
+  font-size: 20px;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
-  .product {
+  .main_banner .product h3 {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main_banner .product {
     position: absolute;
     width: 33vw;
     height: 88%;
     gap: 10px;
     right: 5%;
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .product {
+  .main_banner .product {
     position: absolute;
     padding: 0;
     width: 22vw;
+    max-width: 400px;
     right: 3%;
   }
 }
-.product .p_slide {
+@media screen and (min-width: 1444px) {
+  .main_banner .product {
+    font-size: 24px;
+  }
+}
+.main_banner .product .p_slide {
   width: 100%;
   aspect-ratio: 1/1;
   background-color: #ffea8c;
   border-radius: 30px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 5px;
   flex-direction: column;
   padding: 10%;
-  word-spacing: -0.5rem;
+  color: #c79018;
 }
-@media screen and (min-width: 1024px) {
-  .product .p_slide {
+@media screen and (min-width: 768px) {
+  .main_banner .product .p_slide {
     padding: 5%;
   }
 }
-.product .p_slide img {
-  width: 80%;
+.main_banner .product .p_slide span {
+  color: #8f5300;
+  font-weight: 800;
 }
-.product .month {
-  background-color: orange;
+.main_banner .product .p_slide img {
+  width: 78%;
+}
+.main_banner .product .month {
+  background-color: #c43663;
+  padding: 16px 0;
+  color: white;
   border-radius: 30px;
   width: 100%;
-  padding: 10px 0;
   text-align: center;
+  font-size: 0.9em;
 }
-.product .beverage {
+.main_banner .product .beverage {
   width: 100%;
   display: flex;
   align-items: center;
   border-radius: 30px;
+  padding: 5%;
   background-color: #fff9d5;
 }
-.product .beverage div {
-  width: 50%;
-  padding: 10px;
+@media screen and (min-width: 768px) {
+  .main_banner .product .beverage {
+    font-size: 0.9em;
+  }
 }
-.product .beverage img {
+.main_banner .product .beverage .beverage_title {
+  color: #5e4a2b;
+  font-weight: 800;
+}
+.main_banner .product .beverage div {
+  width: 50%;
+}
+.main_banner .product .beverage img {
   width: 100%;
+}
+
+.event {
+  height: 1000px;
 }/*# sourceMappingURL=style.css.map */
