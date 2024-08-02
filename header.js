@@ -1,7 +1,142 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   const header = document.querySelector("header");
-//   header.innerHTML = ``;
-// });
+document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector("header");
+  header.innerHTML = `  <div class="s_h">
+        <h1>
+          <a href="#">
+            <img src="./img/logo_mobile-1833920b.png" alt="로고" />
+          </a>
+        </h1>
+        <span class="material-symbols-outlined menu">menu</span>
+        <nav>
+          <button><div class="off">DUNKIN' OF MONTH</div></button>
+          <button>
+            <div class="off">
+              BRAND
+              <span class="material-symbols-outlined">arrow_forward_ios</span>
+            </div>
+            <ul class="drop">
+              <li>HISTORY</li>
+              <li>DD COMMITMENT</li>
+            </ul>
+          </button>
+          <button>
+            <div class="off">
+              MENU
+              <span class="material-symbols-outlined">arrow_forward_ios</span>
+            </div>
+            <ul class="drop">
+              <li>ALL</li>
+              <li>DONUT</li>
+              <li>FOOD</li>
+              <li>COFFEE</li>
+              <li>BEVERAGE</li>
+              <li>SNACK & MORE</li>
+            </ul>
+          </button>
+          <button>
+            <div class="off">
+              EVENT
+              <span class="material-symbols-outlined">arrow_forward_ios</span>
+            </div>
+            <ul class="drop">
+              <li>프로모션</li>
+              <li>제휴혜택</li>
+            </ul>
+          </button>
+          <button>
+            <div class="off">STORE</div>
+          </button>
+          <button>
+            <div class="off">
+              ORDER
+              <span class="material-symbols-outlined">arrow_forward_ios</span>
+            </div>
+            <ul class="drop">
+              <li>케이터링</li>
+              <li>딜리버리</li>
+              <li>선물하기</li>
+            </ul>
+          </button>
+          <button>
+            <div class="off">
+              <div class="link">
+                <img
+                  src="./img/header_instagram-17093e04.svg"
+                  alt="instargram"
+                />
+                <img src="./img/header_youtube-6df669ee.svg" alt="youtube" />
+                <img src="./img/header_blog-0f429453.svg" alt="blog" />
+              </div>
+              <a href="#">창업문의</a>
+            </div>
+          </button>
+        </nav>
+      </div>
+      <div class="m_h">
+        <nav>
+          <div class="depth"></div>
+          <div class="side_nav">
+            <button><div class="off">DUNKIN' OF MONTH</div></button>
+            <button class="down">
+              <div>BRAND</div>
+              <ul>
+                <li>HISTORY</li>
+                <li>DD COMMITMENT</li>
+              </ul>
+            </button>
+            <button class="down">
+              <div>MENU</div>
+              <ul>
+                <li>ALL</li>
+                <li>DONUT</li>
+                <li>FOOD</li>
+                <li>COFFEE</li>
+                <li>BEVERAGE</li>
+                <li>SNACK & MORE</li>
+              </ul>
+            </button>
+          </div>
+          <h1>
+            <a href="#">
+              <picture>
+                <source
+                  media="(min-width: 1464px)"
+                  srcset="./img/logo-bc30d2d8.png"
+                />
+                <img src="./img/logo_mobile-1833920b.png" alt="로고" />
+              </picture>
+            </a>
+          </h1>
+          <div class="side_nav right">
+            <button class="down">
+              <div>EVENT</div>
+              <ul class="drop">
+                <li>프로모션</li>
+                <li>제휴혜택</li>
+              </ul>
+            </button>
+            <button>
+              <div>STORE</div>
+            </button>
+            <button class="down">
+              <div>ORDER</div>
+              <ul>
+                <li>케이터링</li>
+                <li>딜리버리</li>
+                <li>선물하기</li>
+              </ul>
+            </button>
+            <a href="#">
+              <div class="e_ship">
+                <span class="material-symbols-outlined">
+                  radio_button_unchecked </span
+                >창업문의
+              </div></a
+            >
+          </div>
+        </nav>
+      </div>`;
+});
 document.addEventListener("DOMContentLoaded", function () {
   // nav 버튼 클릭
   document.querySelectorAll("header button").forEach((button) => {
