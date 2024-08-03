@@ -1,21 +1,57 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Dunkin Sans";
+  src: url("./fonts/Dunkin Sans.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
 .max-w {
   margin: 0 auto;
   width: 100%;
-  max-width: 1700px;
-  display: flex;
-  justify-content: space-between;
+  max-width: 1464px;
   padding: 32px 0;
   font-family: sans-serif;
+}
+.max-w address {
   font-size: 12px;
 }
 .max-w h5 {
-  font-size: 16px;
+  font-size: 14px;
+  font-family: "Dunkin Sans";
 }
 .max-w .f-r {
   width: 800px;
+  font-size: 12px;
+}
+.max-w .login {
+  display: flex;
+  cursor: pointer;
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+}
+.max-w .login li {
+  border-left: 1px solid gray;
+  padding-left: 10px;
+  margin-left: 10px;
+}
+.max-w .sns {
+  display: flex;
+  cursor: pointer;
+}
+.max-w .login li:nth-of-type(1) {
+  color: #fc7823;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 .space-b {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }/*# sourceMappingURL=footer.css.map */
