@@ -11,15 +11,26 @@
   font-weight: 400;
   font-style: normal;
 }
+.sub-color {
+  color: #c43663;
+}
+.main-color {
+  color: #f06a00;
+}
+.bold {
+  font-weight: bold;
+}
 $sub-color: #c43663;
-$main-color: #fc7823;
+$main-color: #f06a00;
+$espresso: #d8d6d5;
 
 .max-w {
   margin: 0 auto;
   width: 100%;
   max-width: 1464px;
   padding: 32px 0;
-  font-family: sans-serif;
+  font-family: "Pretendard-Regular";
+  color: #3d332e;
   address {
     font-size: 12px;
   }
@@ -53,9 +64,15 @@ $main-color: #fc7823;
     padding: 0;
     border: none;
   }
+  .policy {
+    border-top: 1px solid $espresso;
+  }
 }
 .space-b {
   display: flex;
   justify-content: space-between;
+}
+.align-c {
+  display: flex;
   align-items: center;
 }
