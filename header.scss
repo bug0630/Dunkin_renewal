@@ -1,14 +1,13 @@
 @font-face {
-  font-family: "Pretendard-Regular";
-  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
+  font-family: "Pretendard";
+  src: url("./fonts/Pretendard-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Dunkin Sans";
   src: url("./fonts/Dunkin Sans.otf") format("opentype");
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
 }
 $header-height: clamp(60px, 6vw, 92px);
@@ -19,7 +18,7 @@ $max-width: 1464px;
   box-sizing: border-box;
 }
 body {
-  font-family: "Dunkin Sans", "Pretendard-Regular";
+  font-family: "Dunkin Sans", "Pretendard";
 }
 body.no-scroll {
   overflow: hidden;
@@ -56,7 +55,7 @@ header {
     .depth {
       position: absolute;
       top: $header-height;
-      width: calc(100vw - 20px);
+      width: calc(100vw - 17px);
       height: 0;
       background-color: rgba(252, 252, 252, 0.6);
       transition: height 0.3s ease;

@@ -1,13 +1,13 @@
 @font-face {
-  font-family: "Pretendard-Regular";
-  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-family: "Pretendard";
+  src: url("./fonts/Pretendard-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Dunkin Sans";
   src: url("./fonts/Dunkin Sans.otf") format("opentype");
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
 }
 * {
@@ -187,4 +187,5 @@ a {
 
 .event {
   height: 1000px;
+  background-color: gray;
 }/*# sourceMappingURL=style.css.map */

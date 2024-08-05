@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Pretendard-Regular";
-  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-family: "Pretendard";
+  src: url("./fonts/Pretendard-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -9,6 +9,16 @@
   src: url("./fonts/Dunkin Sans.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
+}
+@media (max-width: 1464px) {
+  .responsive-image {
+    display: none;
+  }
+}
+@media (max-width: 786px) {
+  .responsive-image {
+    display: block;
+  }
 }
 .sub-color {
   color: #c43663;
@@ -22,39 +32,88 @@
   font-weight: bold;
 }
 
+.pad {
+  padding: 10px 0;
+}
+
 .max-w {
   margin: 0 auto;
-  width: 100%;
+  width: 95vw;
   max-width: 1464px;
+  margin: 0 auto;
   padding: 32px 0;
-  font-family: "Pretendard-Regular";
+  font-family: "Pretendard";
   color: #3d332e;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .max-w {
+    width: 85vw;
+  }
 }
 .max-w address {
   font-size: 12px;
 }
 .max-w h5 {
   font-size: 14px;
+  color: rgba(61, 51, 46, 0.5019607843);
   font-family: "Dunkin Sans";
 }
+@media screen and (max-width: 976px) {
+  .max-w .f-l {
+    width: 100%;
+  }
+}
+.max-w .f-l img {
+  padding-bottom: 20px;
+}
+.max-w .f-l .text {
+  line-height: 1.5rem;
+}
+@media screen and (max-width: 786px) {
+  .max-w .f-l .text {
+    margin-top: 50px;
+  }
+}
 .max-w .f-r {
-  width: 800px;
+  width: 46.5%;
   font-size: 12px;
+  text-align: right;
+}
+@media screen and (max-width: 976px) {
+  .max-w .f-r {
+    display: none;
+  }
+}
+.max-w .f-r h5 {
+  padding-bottom: 10px;
+}
+.max-w .f-r li {
+  padding: 5px 0;
 }
 .max-w .login {
   display: flex;
   cursor: pointer;
-  font-family: "Pretendard-Regular";
   font-size: 14px;
 }
 .max-w .login li {
-  border-left: 1px solid gray;
+  border-left: 1px solid #d8d6d5;
   padding-left: 10px;
   margin-left: 10px;
 }
 .max-w .sns {
   display: flex;
+  gap: 16px;
+  opacity: 0.5;
+}
+.max-w .sns a {
   cursor: pointer;
+}
+@media screen and (max-width: 786px) {
+  .max-w .sns {
+    position: absolute;
+    top: 70px;
+  }
 }
 .max-w .login li:nth-of-type(1) {
   color: #f06a00;
@@ -64,6 +123,40 @@
 }
 .max-w .policy {
   border-top: 1px solid #d8d6d5;
+  padding-top: 15px;
+  font-size: 14px;
+  gap: 50px;
+}
+@media screen and (max-width: 786px) {
+  .max-w .policy {
+    flex-direction: column-reverse;
+    gap: 10px;
+    align-items: baseline;
+  }
+}
+.max-w .policy .radio {
+  position: relative;
+  width: 185px;
+  padding: 15px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 30px;
+  border: 1px solid #d8d6d5;
+  flex-shrink: 0;
+}
+@media (max-width: 976px) {
+  .max-w .policy .radio {
+    position: absolute;
+    top: 20px;
+    right: 0;
+  }
+}
+.max-w .terms {
+  flex-wrap: wrap;
+  display: flex;
+}
+.max-w .terms li {
+  padding: 5px 10px 5px 0;
 }
 
 .space-b {
