@@ -126,13 +126,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 <li>선물하기</li>
               </ul>
             </button>
-            <a href="#">
+            
               <div class="e_ship">
                 <span class="material-symbols-outlined">
                   radio_button_unchecked </span
                 >창업문의
-              </div></a
-            >
+              </div>
+            
           </div>
         </nav>
       </div>`;

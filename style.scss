@@ -10,9 +10,16 @@
   font-weight: 600;
   font-style: normal;
 }
+@font-face {
+  font-family: "Dunkin Sans Bold";
+  src: url("./fonts/Dunkin\ Sans\ Bold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
 $header-height: clamp(60px, 6vw, 92px);
 $sub-color: #c43663;
-$main-color: #fc7823;
+$main-color: #f06a00;
+$text-color: #3d332e;
 $max-width: 1464px;
 * {
   box-sizing: border-box;
@@ -26,8 +33,32 @@ body.no-scroll {
 
 a {
   all: unset;
+  cursor: pointer;
 }
-
+h2 {
+  width: 70%;
+  margin: 0 auto;
+  font-size: clamp(40px, 3.41vw, 50px);
+  font-family: "Dunkin Sans Bold";
+  color: $main-color;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  word-spacing: -1rem;
+}
+h3 {
+  width: 70%;
+  margin: 0 auto;
+  font-size: clamp(14px, 5vw, 20px);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  color: $text-color;
+  margin-top: 12px;
+}
 .main_banner {
   width: 100%;
   overflow: hidden;
@@ -84,9 +115,7 @@ a {
     justify-content: space-between;
     font-size: 24px;
     word-spacing: -0.5rem;
-    h3 {
-      font-size: 20px;
-      text-align: center;
+    h5 {
       @media screen and (min-width: 768px) {
         font-size: 16px;
       }
@@ -166,6 +195,6 @@ a {
   }
 }
 .event {
+  padding-top: clamp(50px, 6.14vw, 90px);
   height: 1000px;
-  background-color: gray;
 }

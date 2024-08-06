@@ -76,6 +76,9 @@ $espresso: #d8d6d5;
     width: 46.5%;
     font-size: 12px;
     text-align: right;
+    a {
+      cursor: pointer;
+    }
     @media screen and (max-width: 976px) {
       display: none;
     }
@@ -147,6 +150,9 @@ $espresso: #d8d6d5;
     display: flex;
     li {
       padding: 5px 10px 5px 0;
+    }
+    a {
+      cursor: pointer;
     }
   }
 }

@@ -80,6 +80,9 @@
   font-size: 12px;
   text-align: right;
 }
+.max-w .f-r a {
+  cursor: pointer;
+}
 @media screen and (max-width: 976px) {
   .max-w .f-r {
     display: none;
@@ -157,6 +160,9 @@
 }
 .max-w .terms li {
   padding: 5px 10px 5px 0;
+}
+.max-w .terms a {
+  cursor: pointer;
 }
 
 .space-b {

@@ -46,7 +46,7 @@ header .m_h {
   word-spacing: -5px;
   font-weight: 900;
   position: relative;
-  font-size: 20px;
+  font-size: clamp(16px, 1.36vw, 20px);
 }
 @media screen and (max-width: 976px) {
   header .m_h {
@@ -66,7 +66,6 @@ header .m_h nav {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  font-size: 1rem;
 }
 header .m_h nav .side_nav {
   width: 40%;
@@ -75,7 +74,6 @@ header .m_h nav .side_nav {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  font-size: 0.9rem;
 }
 @media screen and (min-width: 1360px) {
   header .m_h nav .side_nav {
@@ -83,12 +81,12 @@ header .m_h nav .side_nav {
   }
 }
 header .m_h nav .right ul {
-  left: 70%;
+  left: 65%;
 }
 header .m_h nav button {
   all: unset;
   cursor: pointer;
-  padding: 40px 20px;
+  padding: 40px 5px;
 }
 header .m_h nav button:hover div {
   color: #c43663;
@@ -121,12 +119,11 @@ header .m_h nav .e_ship {
   justify-content: space-between;
   align-items: center;
   border: 1px solid rgb(185, 185, 185);
-  font-size: 1rem;
 }
 @media screen and (max-width: 1360px) {
   header .m_h nav .e_ship {
-    padding: 2px 10px 2px 5px;
-    font-size: 0.6rem;
+    padding: 4px 10px 4px 5px;
+    font-size: 0.8rem;
   }
 }
 header .m_h nav .e_ship:hover .material-symbols-outlined {
@@ -227,7 +224,7 @@ header .s_h nav button .link {
 }
 header .s_h nav button a {
   color: white;
-  background-color: #fc7823;
+  background-color: #f06a00;
   border-radius: 30px;
   font-size: 14px;
   line-height: 34px;
