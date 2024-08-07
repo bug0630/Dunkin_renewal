@@ -1,0 +1,13 @@
+{
+  "name": "dunkin_renewal",
+  "version": "1.0.0",
+  "description": "던킨 리뉴얼 클론코딩",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

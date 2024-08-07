@@ -1,0 +1,21 @@
+.flicking-camera {
+  background-color: gray;
+  display: flex;
+}
+
+.flicking-viewport {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.panel {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  background: #eee;
+  border: 1px solid #ddd;
+}/*# sourceMappingURL=slide.css.map */

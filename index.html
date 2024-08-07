@@ -13,8 +13,23 @@
     <link rel="stylesheet" href="./header.css" />
     <link rel="stylesheet" href="./footer.css" />
     <script src="./header.js" defer></script>
-    <script src="./index.js" defer></script>
-
+    <script src="./index.js" type="module" defer></script>
+    <!-- fliking -->
+    <script
+      src="https://unpkg.com/@egjs/flicking/dist/flicking.pkgd.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@egjs/flicking/dist/flicking.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@egjs/flicking/dist/flicking-inline.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./slide.css" />
     <title>던킨</title>
   </head>
   <body>
@@ -77,6 +92,16 @@
       <h3>
         <span> 던킨의 다양한 혜택과 이벤트 </span><span>그리고 신제품</span>
       </h3>
+      <!-- Viewport element -->
+      <div id="carousel" class="flicking-viewport">
+        <!-- Camera element -->
+        <div class="flicking-camera">
+          <!-- Panels, class names are your choice -->
+          <div class="panel">1</div>
+          <div class="panel">2</div>
+          <div class="panel">3</div>
+        </div>
+      </div>
     </section>
     <footer>
       <div class="max-w">
