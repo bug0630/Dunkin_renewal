@@ -196,5 +196,24 @@ h3 {
 }
 .event {
   padding-top: clamp(50px, 6.14vw, 90px);
-  height: 1000px;
+  padding-bottom: clamp(60px, 6.83vw, 100px);
+  background-color: #f8f4f1;
+  .e-box {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1464px;
+    margin-top: 20px;
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+  .e-s-box {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1464px;
+    margin-top: 20px;
+    @media screen and (min-width: 767px) {
+      display: none;
+    }
+  }
 }
