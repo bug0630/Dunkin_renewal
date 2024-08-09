@@ -1,28 +1,38 @@
-// 플러그인을 사용하기 위해 @egjs/flicking-plugins에서 가져옴
-const { AutoPlay } = window.Flicking.Plugins;
+const { AutoPlay, Pagination } = window.Flicking.Plugins;
 
 const flicking = new Flicking("#carousel", {
   align: "center",
   circular: true,
-  duration: 1000,
   renderOnlyVisible: true,
+  deceleration: 0.5,
 });
 
 const flicking2 = new Flicking("#carousel2", {
   align: "center",
   circular: true,
-  duration: 1000,
   renderOnlyVisible: true,
+  deceleration: 0.5,
 });
+
 const autoPlayPlugin = new AutoPlay({
   duration: 4000,
   direction: "NEXT",
   stopOnHover: true,
 });
+
 const autoPlayPlugin2 = new AutoPlay({
   duration: 4000,
   direction: "NEXT",
   stopOnHover: true,
 });
-flicking.addPlugins(autoPlayPlugin);
-flicking2.addPlugins(autoPlayPlugin2);
+
+const pagi = new Pagination({
+  type: "bullet",
+});
+const pagi2 = new Pagination({
+  type: "bullet",
+});
+
+// 플러그인 추가
+flicking.addPlugins(autoPlayPlugin, pagi);
+flicking2.addPlugins(autoPlayPlugin2, pagi2); // flicking2에도 Pagination 추가
