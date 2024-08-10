@@ -30,11 +30,6 @@ body {
 body.no-scroll {
   overflow: hidden;
 }
-
-a {
-  all: unset;
-  cursor: pointer;
-}
 h2 {
   width: 70%;
   margin: 0 auto;
@@ -86,7 +81,7 @@ h3 {
     @media screen and (max-width: 767px) {
       padding: 6vw;
     }
-    img {
+    .main_img {
       width: 100%;
       border-radius: 4vw;
       @media screen and (max-width: 767px) {
@@ -104,7 +99,6 @@ h3 {
     width: 100%;
     display: block;
     position: absolute;
-    z-index: 2;
   }
   .product {
     width: 100%;
@@ -116,31 +110,32 @@ h3 {
     font-size: 24px;
     word-spacing: -0.5rem;
     h5 {
+      text-align: center;
       @media screen and (min-width: 768px) {
         font-size: 16px;
       }
     }
     @media screen and (min-width: 768px) {
       position: absolute;
-      width: 33vw;
-      height: 88%;
+      width: 36%;
       gap: 10px;
-      right: 5%;
+      right: 4%;
       font-size: 20px;
     }
     @media screen and (min-width: 1024px) {
       position: absolute;
       padding: 0;
-      width: 22vw;
+      width: 25%;
       max-width: 400px;
       right: 3%;
     }
     @media screen and (min-width: 1444px) {
+      padding: 10px;
       font-size: 24px;
     }
     .p_slide {
       width: 100%;
-      aspect-ratio: 1/1;
+      aspect-ratio: 372/394;
       background-color: #ffea8c;
       border-radius: 30px;
       display: flex;
@@ -148,28 +143,50 @@ h3 {
       justify-content: center;
       gap: 5px;
       flex-direction: column;
-      padding: 10%;
       color: #c79018;
-      @media screen and (min-width: 768px) {
-        padding: 5%;
+      .flicking-camera {
+        width: 90%;
+        height: 90%;
+        .panel {
+          gap: 5px;
+        }
+      }
+      .flicking-pagination {
+        width: 100%;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+      .flicking-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background-color: gray;
+      }
+      .flicking-pagination-bullet-active {
+        width: 20px;
+        height: 10px;
+        border-radius: 20px;
+        background-color: rgb(214, 88, 88);
       }
       span {
         color: #8f5300;
         font-weight: 800;
       }
-
-      img {
-        width: 78%;
-      }
     }
     .month {
       background-color: $sub-color;
-      padding: 16px 0;
+      padding: 3% 0;
       color: white;
       border-radius: 30px;
       width: 100%;
       text-align: center;
-      font-size: 0.9em;
+      @media screen and (min-width: 768px) {
+        padding: 4% 0;
+        font-size: clamp(10px, 1.7vw, 25px);
+      }
     }
     .beverage {
       width: 100%;
@@ -189,7 +206,7 @@ h3 {
         width: 50%;
       }
       img {
-        width: 100%;
+        width: 80%;
       }
     }
   }
@@ -198,6 +215,10 @@ h3 {
   padding-top: clamp(50px, 6.14vw, 90px);
   padding-bottom: clamp(60px, 6.83vw, 100px);
   background-color: #f8f4f1;
+
+  img {
+    box-shadow: 2px 2px 5px 3px rgb(197, 197, 197);
+  }
   .e-box {
     margin: 0 auto;
     width: 100%;
@@ -215,5 +236,50 @@ h3 {
     @media screen and (min-width: 767px) {
       display: none;
     }
+  }
+  .panel {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      -webkit-user-drag: none;
+    }
+  }
+  .panel img {
+    width: 90%;
+    border-radius: 30px;
+    cursor: pointer;
+    -webkit-user-drag: none;
+  }
+  .panel:nth-of-type(2) img {
+    width: 100%;
+  }
+  .flicking-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: gray;
+  }
+  .flicking-pagination-bullet-active {
+    width: 20px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #c43663;
+  }
+
+  .flicking-pagination {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
   }
 }
