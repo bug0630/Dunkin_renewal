@@ -31,15 +31,15 @@
 }
 
 .flicking-pagination-bullet {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 100%;
-  background-color: gray;
+  background-color: #808080;
 }
 
 .flicking-pagination-bullet-active {
   width: 20px;
-  height: 10px;
+  height: 8px;
   border-radius: 10px;
   background-color: #c43663;
 }/*# sourceMappingURL=slide.css.map */
