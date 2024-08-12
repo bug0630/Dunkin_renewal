@@ -1,65 +1,50 @@
 const { AutoPlay, Pagination } = window.Flicking.Plugins;
 
-const m_flicking = new Flicking("#m-carousel", {
-  align: "center",
-  circular: true,
-  renderOnlyVisible: true,
-  deceleration: 0.5,
-});
-const b_flicking = new Flicking("#b-carousel", {
-  align: "center",
-  circular: true,
-  renderOnlyVisible: true,
-  deceleration: 0.5,
-});
-const flicking = new Flicking("#carousel", {
-  align: "center",
-  circular: true,
-  renderOnlyVisible: true,
-  deceleration: 0.5,
-});
-const flicking2 = new Flicking("#carousel2", {
-  align: "center",
-  circular: true,
-  renderOnlyVisible: true,
-  deceleration: 0.5,
-});
-const autoPlay = new AutoPlay({
-  duration: 4000,
-  direction: "NEXT",
-  stopOnHover: true,
-});
-const autoPlay2 = new AutoPlay({
-  duration: 4000,
-  direction: "NEXT",
-  stopOnHover: true,
-});
-const autoPlayPlugin = new AutoPlay({
-  duration: 4000,
-  direction: "NEXT",
-  stopOnHover: true,
-});
+function createFlicking(selector, autoPlayDuration = 4000) {
+  const flickingInstance = new Flicking(selector, {
+    align: "center",
+    circular: true,
+    renderOnlyVisible: true,
+    deceleration: 0.5,
+  });
 
-const autoPlayPlugin2 = new AutoPlay({
-  duration: 4000,
-  direction: "NEXT",
-  stopOnHover: true,
-});
-const page = new Pagination({
-  type: "bullet",
-});
-const page2 = new Pagination({
-  type: "bullet",
-});
-const pagi = new Pagination({
-  type: "bullet",
-});
-const pagi2 = new Pagination({
-  type: "bullet",
-});
+  const autoPlayPlugin = new AutoPlay({
+    duration: autoPlayDuration,
+    direction: "NEXT",
+    stopOnHover: true,
+  });
 
-// 플러그인 추가
-m_flicking.addPlugins(autoPlay, page);
-b_flicking.addPlugins(autoPlay2, page2);
-flicking.addPlugins(autoPlayPlugin, pagi);
-flicking2.addPlugins(autoPlayPlugin2, pagi2); // flicking2에도 Pagination 추가
+  const paginationPlugin = new Pagination({
+    type: "bullet",
+  });
+
+  flickingInstance.addPlugins(autoPlayPlugin, paginationPlugin);
+  return flickingInstance;
+}
+function responsiveFlicking(selector, autoPlayDuration = 4000) {
+  const flickingInstance = new Flicking(selector, {
+    align: "center",
+    circular: false,
+    bound: true,
+    renderOnlyVisible: true,
+    deceleration: 0.5,
+  });
+
+  const autoPlayPlugin = new AutoPlay({
+    duration: autoPlayDuration,
+    direction: "NEXT",
+    stopOnHover: true,
+  });
+
+  const paginationPlugin = new Pagination({
+    type: "bullet",
+  });
+
+  flickingInstance.addPlugins(autoPlayPlugin, paginationPlugin);
+  return flickingInstance;
+}
+const m_flicking = createFlicking("#m-carousel");
+const b_flicking = createFlicking("#b-carousel");
+const flicking = createFlicking("#carousel");
+const flicking2 = createFlicking("#carousel2");
+const menu_flicking = responsiveFlicking("#menu-carousel");

@@ -149,6 +149,9 @@ h3 {
         height: 90%;
         .panel {
           gap: 5px;
+          img {
+            width: 80%;
+          }
         }
       }
       .flicking-pagination {
@@ -236,26 +239,27 @@ h3 {
   }
   .gradient {
     width: 18%;
-    z-index: 10;
+    z-index: 2;
     height: 100%;
     position: absolute;
     background: linear-gradient(
       to right,
       #f8f4f1 0%,
-      #f8f4f1 50%,
+      #f8f4f1 20%,
       rgba(248, 244, 241, 0) 100%
     );
   }
   .gradient-r {
     width: 18%;
     right: 0;
-    z-index: 10;
+    z-index: 2;
     height: 100%;
     position: absolute;
     background: linear-gradient(
       to left,
       #f8f4f1 0%,
-      #f8f4f1 50%,
+      #f8f4f1 20%,
+
       rgba(248, 244, 241, 0) 100%
     );
   }
@@ -306,5 +310,26 @@ h3 {
     align-items: center;
     justify-content: center;
     gap: 10px;
+  }
+}
+.menu {
+  padding-top: clamp(50px, 6.14vw, 90px);
+  padding-bottom: clamp(60px, 6.83vw, 100px);
+  #menu-carousel {
+    width: 100%;
+    max-width: 1216px;
+    margin: 0 auto;
+    padding: 40px 14px;
+    overflow: hidden;
+  }
+  .flicking-camera {
+    width: 1216px;
+  }
+  .panel {
+    padding: 0 10px;
+    width: 19%;
+    @media screen and (max-width: 1445px) {
+      width: 25%;
+    }
   }
 }
