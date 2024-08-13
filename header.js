@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <img src="./img/logo_mobile-1833920b.png" alt="로고" />
           </a>
         </h1>
-        <span class="material-symbols-outlined menu">menu</span>
+        <span class="material-symbols-outlined h_menu">menu</span>
         <nav>
           <button><div class="off">DUNKIN' OF MONTH</div></button>
           <button>
@@ -159,7 +159,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Close 버튼 클릭 이벤트
-  const menuButton = document.querySelector(".material-symbols-outlined.menu");
+  const menuButton = document.querySelector(
+    ".material-symbols-outlined.h_menu"
+  );
 
   menuButton.addEventListener("click", () => {
     const nav = document.querySelector("nav");

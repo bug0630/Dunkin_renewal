@@ -21,9 +21,12 @@ function createFlicking(selector, autoPlayDuration = 4000) {
   flickingInstance.addPlugins(autoPlayPlugin, paginationPlugin);
   return flickingInstance;
 }
+
 function responsiveFlicking(selector, autoPlayDuration = 4000) {
+  const alignSetting = window.innerWidth <= 1445 ? "center" : "prev";
+
   const flickingInstance = new Flicking(selector, {
-    align: "center",
+    align: alignSetting,
     circular: false,
     bound: true,
     renderOnlyVisible: true,
@@ -43,6 +46,7 @@ function responsiveFlicking(selector, autoPlayDuration = 4000) {
   flickingInstance.addPlugins(autoPlayPlugin, paginationPlugin);
   return flickingInstance;
 }
+
 const m_flicking = createFlicking("#m-carousel");
 const b_flicking = createFlicking("#b-carousel");
 const flicking = createFlicking("#carousel");

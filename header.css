@@ -164,7 +164,7 @@ header .s_h h1 {
 header .s_h .material-symbols-outlined {
   font-size: 28px;
 }
-header .s_h .menu,
+header .s_h .h_menu,
 header .s_h .close {
   line-height: 60px;
   position: absolute;
