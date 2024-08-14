@@ -23,10 +23,8 @@ function createFlicking(selector, autoPlayDuration = 4000) {
 }
 
 function responsiveFlicking(selector, autoPlayDuration = 4000) {
-  const alignSetting = window.innerWidth <= 1445 ? "center" : "prev";
-
   const flickingInstance = new Flicking(selector, {
-    align: alignSetting,
+    align: "center",
     circular: false,
     bound: true,
     renderOnlyVisible: true,
@@ -52,3 +50,4 @@ const b_flicking = createFlicking("#b-carousel");
 const flicking = createFlicking("#carousel");
 const flicking2 = createFlicking("#carousel2");
 const menu_flicking = responsiveFlicking("#menu-carousel");
+const w_flicking = responsiveFlicking("#w-carousel");

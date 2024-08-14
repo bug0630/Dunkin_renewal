@@ -27,6 +27,12 @@
     -webkit-user-drag: none;
   }
 }
+.flicking-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
 .flicking-pagination-bullet {
   width: 8px;
   height: 8px;
@@ -34,6 +40,7 @@
   background-color: #808080;
 }
 .flicking-pagination-bullet-active {
+  display: block;
   width: 20px;
   height: 8px;
   border-radius: 10px;
