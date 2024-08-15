@@ -366,8 +366,13 @@ h3 {
 .w_dunkin {
   padding-top: clamp(50px, 6.14vw, 90px);
   padding-bottom: clamp(60px, 6.83vw, 100px);
+  .width {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1024px;
+  }
   .panel {
-    width: calc(20% - 20px);
+    width: calc(33% - 20px);
     margin: 0 10px;
     border-radius: 20px;
     background-color: #f8f4f1;
