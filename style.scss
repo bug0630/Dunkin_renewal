@@ -274,13 +274,12 @@ h3 {
     }
   }
   .panel {
-    width: 60%;
+    width: 70%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 5px;
     a {
       display: flex;
       align-items: center;
@@ -366,39 +365,54 @@ h3 {
 .w_dunkin {
   padding-top: clamp(50px, 6.14vw, 90px);
   padding-bottom: clamp(60px, 6.83vw, 100px);
+  background-color: #f8f4f1;
   .width {
-    margin: 0 auto;
     width: 100%;
-    max-width: 1024px;
+    max-width: 1092px;
+    margin: 0 auto;
+  }
+  #w-carousel {
+    padding: 40px 0;
   }
   .panel {
     width: calc(33% - 20px);
     margin: 0 10px;
-    border-radius: 20px;
-    background-color: #f8f4f1;
+    border-radius: 30px;
     box-shadow: 2px 2px 5px 2px rgb(197, 197, 197);
+    background-color: #ffffff;
     a {
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       div {
-        border-radius: 20px;
+        width: 96%;
+        border-radius: 30px;
+        margin: 2%;
+        overflow: hidden;
       }
       h4 {
         padding: 20px 0;
         font-size: 20px;
       }
+      img {
+        transition-duration: 0.7s;
+      }
+      img:hover {
+        transform: scale(1.1);
+      }
     }
 
-    @media screen and (max-width: 1445px) {
-      width: calc(25% - 20px);
-    }
     @media screen and (max-width: 977px) {
-      width: calc(50% - 20px);
+      width: calc(70% - 20px);
     }
-    @media screen and (max-width: 769px) {
-      width: calc(60% - 20px);
+  }
+
+  .flicking-pagination {
+    height: 100px;
+    @media screen and (min-width: 977px) {
+      display: none;
     }
   }
 }

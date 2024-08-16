@@ -289,13 +289,12 @@ h3 {
   }
 }
 .event .panel {
-  width: 60%;
+  width: 70%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 5px;
 }
 .event .panel a {
   display: flex;
@@ -388,44 +387,56 @@ h3 {
 .w_dunkin {
   padding-top: clamp(50px, 6.14vw, 90px);
   padding-bottom: clamp(60px, 6.83vw, 100px);
+  background-color: #f8f4f1;
 }
 .w_dunkin .width {
-  margin: 0 auto;
   width: 100%;
-  max-width: 1024px;
+  max-width: 1092px;
+  margin: 0 auto;
+}
+.w_dunkin #w-carousel {
+  padding: 40px 0;
 }
 .w_dunkin .panel {
   width: calc(33% - 20px);
   margin: 0 10px;
-  border-radius: 20px;
-  background-color: #f8f4f1;
+  border-radius: 30px;
   box-shadow: 2px 2px 5px 2px rgb(197, 197, 197);
+  background-color: #ffffff;
 }
 .w_dunkin .panel a {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .w_dunkin .panel a div {
-  border-radius: 20px;
+  width: 96%;
+  border-radius: 30px;
+  margin: 2%;
+  overflow: hidden;
 }
 .w_dunkin .panel a h4 {
   padding: 20px 0;
   font-size: 20px;
 }
-@media screen and (max-width: 1445px) {
-  .w_dunkin .panel {
-    width: calc(25% - 20px);
-  }
+.w_dunkin .panel a img {
+  transition-duration: 0.7s;
+}
+.w_dunkin .panel a img:hover {
+  transform: scale(1.1);
 }
 @media screen and (max-width: 977px) {
   .w_dunkin .panel {
-    width: calc(50% - 20px);
+    width: calc(70% - 20px);
   }
 }
-@media screen and (max-width: 769px) {
-  .w_dunkin .panel {
-    width: calc(60% - 20px);
+.w_dunkin .flicking-pagination {
+  height: 100px;
+}
+@media screen and (min-width: 977px) {
+  .w_dunkin .flicking-pagination {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
