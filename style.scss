@@ -21,6 +21,17 @@ $sub-color: #c43663;
 $main-color: #f06a00;
 $text-color: #3d332e;
 $max-width: 1464px;
+.up1024 {
+  display: block;
+  @media screen and (max-width: 1444px) {
+    display: none;
+  }
+}
+.down1024 {
+  @media screen and (min-width: 1444px) {
+    display: none;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -321,28 +332,34 @@ h3 {
     margin: 0 auto;
     padding: 0 20px;
   }
-  #menu-carousel {
-    padding: 40px 0;
+  .flicking-viewport {
+    padding: 40px 10px;
+    @media screen and (max-width: 769px) {
+      padding: 40px 40px;
+    }
   }
   .flicking-pagination {
     width: 100%;
     height: 100px;
+
     @media screen and (min-width: 1445px) {
       display: none;
     }
   }
   .panel {
-    width: calc(20% - 20px);
+    width: 18%;
     margin: 0 10px;
     border-radius: 20px;
     background-color: #f8f4f1;
     box-shadow: 2px 2px 5px 2px rgb(197, 197, 197);
     a {
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       div {
+        width: 100%;
         border-radius: 20px;
       }
       h4 {
@@ -358,7 +375,7 @@ h3 {
       width: calc(50% - 20px);
     }
     @media screen and (max-width: 769px) {
-      width: calc(60% - 20px);
+      width: 100%;
     }
   }
 }
