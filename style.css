@@ -390,6 +390,12 @@ h3 {
   padding: 20px 0;
   font-size: 20px;
 }
+.menu .panel a img {
+  transition-duration: 0.7s;
+}
+.menu .panel a img:hover {
+  transform: scale(1.1);
+}
 @media screen and (max-width: 1445px) {
   .menu .panel {
     width: calc(25% - 20px);
@@ -440,8 +446,12 @@ h3 {
   overflow: hidden;
 }
 .w_dunkin .panel a h4 {
-  padding: 20px 0;
+  padding-top: 20px;
   font-size: 20px;
+}
+.w_dunkin .panel a h5 {
+  padding: 10px 0;
+  font-size: 16px;
 }
 .w_dunkin .panel a img {
   transition-duration: 0.7s;

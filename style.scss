@@ -366,6 +366,12 @@ h3 {
         padding: 20px 0;
         font-size: 20px;
       }
+      img {
+        transition-duration: 0.7s;
+      }
+      img:hover {
+        transform: scale(1.1);
+      }
     }
 
     @media screen and (max-width: 1445px) {
@@ -410,8 +416,12 @@ h3 {
         overflow: hidden;
       }
       h4 {
-        padding: 20px 0;
+        padding-top: 20px;
         font-size: 20px;
+      }
+      h5 {
+        padding: 10px 0;
+        font-size: 16px;
       }
       img {
         transition-duration: 0.7s;
