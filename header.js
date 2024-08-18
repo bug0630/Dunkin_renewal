@@ -179,13 +179,13 @@ document.addEventListener("DOMContentLoaded", function () {
         nav.style.height = "0";
         menuButton.textContent = "menu";
         menuButton.classList.remove("close");
-        menuButton.classList.add("menu");
+        menuButton.classList.add("h_menu");
         body.classList.remove("no-scroll");
       } else {
         const headerHeight = getHeaderHeight();
         nav.style.height = `100vh`;
         menuButton.textContent = "close";
-        menuButton.classList.remove("menu");
+        menuButton.classList.remove("h_menu");
         menuButton.classList.add("close");
         nav.style.height = `calc(100vh - ${headerHeight}px)`;
         body.classList.add("no-scroll");

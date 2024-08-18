@@ -37,7 +37,27 @@
 $sub-color: #c43663;
 $main-color: #f06a00;
 $espresso: #d8d6d5;
-
+.fixed {
+  width: clamp(55px, 4.98vw, 73px);
+  background-color: $main-color;
+  position: fixed;
+  right: 5%;
+  bottom: 20%;
+  z-index: 10;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  button {
+    all: unset;
+    background-color: white;
+  }
+}
 .max-w {
   margin: 0 auto;
   width: 95vw;
