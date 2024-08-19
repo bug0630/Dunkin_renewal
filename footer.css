@@ -38,24 +38,64 @@
 
 .fixed {
   width: clamp(55px, 4.98vw, 73px);
-  background-color: #f06a00;
   position: fixed;
-  right: 5%;
-  bottom: 20%;
-  z-index: 10;
+  right: 3%;
+  bottom: 3%;
+  z-index: 2;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.fixed ul {
+  background-color: #f06a00;
+  width: 100%;
+  border-radius: clamp(9px, 0.81vw, 12px);
+  display: flex;
+  flex-direction: column;
+}
 .fixed li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: clamp(10px, 0.88vw, 13px);
+  padding-top: clamp(10px, 0.95vw, 14px);
+}
+.fixed li span {
+  margin-top: 8px;
+}
+.fixed li:after {
+  content: "";
+  background-color: white;
+  width: 33%;
+  height: 1px;
+  margin-top: 10px;
+}
+.fixed li:nth-of-type(3):after {
+  content: "";
+  background-color: white;
+  width: 0;
+  height: 1px;
+  margin-top: 10px;
 }
 .fixed button {
   all: unset;
   background-color: white;
+  margin-top: 20px;
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px 3px rgb(221, 221, 221);
+}
+.fixed button a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.fixed button img {
+  width: 30%;
 }
 
 .max-w {
