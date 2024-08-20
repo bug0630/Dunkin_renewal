@@ -425,6 +425,11 @@ h3 {
 .w_dunkin #w-carousel {
   padding: 40px 0;
 }
+@media screen and (max-width: 977px) {
+  .w_dunkin #w-carousel {
+    padding: 40px;
+  }
+}
 .w_dunkin .panel {
   width: calc(33% - 20px);
   margin: 0 10px;
