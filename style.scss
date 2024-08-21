@@ -21,17 +21,7 @@ $sub-color: #c43663;
 $main-color: #f06a00;
 $text-color: #3d332e;
 $max-width: 1464px;
-.up1024 {
-  display: block;
-  @media screen and (max-width: 1444px) {
-    display: none;
-  }
-}
-.down1024 {
-  @media screen and (min-width: 1444px) {
-    display: none;
-  }
-}
+
 * {
   box-sizing: border-box;
 }
