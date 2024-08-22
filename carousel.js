@@ -24,7 +24,7 @@ function createFlicking(selector, autoPlayDuration = 4000) {
 
 function responsiveFlicking(selector, autoPlayDuration = 4000) {
   const flickingInstance = new Flicking(selector, {
-    align: "prev",
+    align: "next",
     bound: "true",
     circular: false,
     renderOnlyVisible: true,
