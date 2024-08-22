@@ -23,9 +23,18 @@ function createFlicking(selector, autoPlayDuration = 4000) {
 }
 
 function responsiveFlicking(selector, autoPlayDuration = 4000) {
+  let paginationPlugin = new Pagination({
+    type: "bullet",
+  });
+
   const flickingInstance = new Flicking(selector, {
-    align: "next",
-    bound: "true",
+    align:
+      window.innerWidth < 769
+        ? "prev"
+        : window.innerWidth < 978
+        ? "prev"
+        : "center",
+    bound: true,
     circular: false,
     renderOnlyVisible: true,
     deceleration: 0.5,
@@ -38,11 +47,41 @@ function responsiveFlicking(selector, autoPlayDuration = 4000) {
     stopOnHover: true,
   });
 
-  const paginationPlugin = new Pagination({
-    type: "bullet",
-  });
-
   flickingInstance.addPlugins(autoPlayPlugin, paginationPlugin);
+
+  function updatePlugins() {
+    let newAlign;
+
+    if (window.innerWidth < 769) {
+      newAlign = "prev";
+    } else if (window.innerWidth < 1024) {
+      newAlign = "center";
+    } else {
+      newAlign = "center";
+    }
+
+    // Align 값을 필요에 따라 업데이트
+    if (flickingInstance.align !== newAlign) {
+      flickingInstance.align = newAlign;
+      flickingInstance.resize();
+    }
+
+    // 화면 크기에 따라 Pagination 플러그인 재적용
+    flickingInstance.removePlugins(paginationPlugin);
+
+    paginationPlugin = new Pagination({
+      type: "bullet",
+    });
+
+    flickingInstance.addPlugins(paginationPlugin);
+  }
+
+  // 초기 실행
+  updatePlugins();
+
+  // 화면 크기 변경 시 플러그인 재적용
+  window.addEventListener("resize", updatePlugins);
+
   return flickingInstance;
 }
 

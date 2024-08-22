@@ -16,21 +16,6 @@
   font-weight: 600;
   font-style: normal;
 }
-.up1024 {
-  display: block;
-}
-@media screen and (max-width: 1444px) {
-  .up1024 {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 1444px) {
-  .down1024 {
-    display: none;
-  }
-}
-
 * {
   box-sizing: border-box;
 }
