@@ -35,10 +35,12 @@ function responsiveFlicking(selector, autoPlayDuration = 4000) {
         ? "prev"
         : "center",
     bound: true,
-    circular: false,
+    circular: true,
     renderOnlyVisible: true,
     deceleration: 0.5,
     bounce: 0,
+
+    circularFallback: "bound",
   });
 
   const autoPlayPlugin = new AutoPlay({

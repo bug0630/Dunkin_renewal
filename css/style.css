@@ -460,6 +460,11 @@ h3 {
     width: calc(70% - 20px);
   }
 }
+@media screen and (max-width: 769px) {
+  .w_dunkin .panel {
+    width: 100%;
+  }
+}
 .w_dunkin .flicking-pagination {
   height: 100px;
 }

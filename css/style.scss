@@ -435,6 +435,9 @@ h3 {
     @media screen and (max-width: 977px) {
       width: calc(70% - 20px);
     }
+    @media screen and (max-width: 769px) {
+      width: 100%;
+    }
   }
 
   .flicking-pagination {
