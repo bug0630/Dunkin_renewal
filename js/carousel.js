@@ -39,7 +39,7 @@ function responsiveFlicking(selector, autoPlayDuration = 4000) {
     renderOnlyVisible: true,
     deceleration: 0.5,
     bounce: 0,
-
+    threshold: 10,
     circularFallback: "bound",
   });
 
