@@ -14,18 +14,21 @@ function createFlicking(selector, autoPlayDuration = 4000) {
     stopOnHover: true,
   });
 
-  const paginationPlugin = new Pagination({
-    type: "bullet",
-  });
+  flickingInstance.addPlugins(autoPlayPlugin);
 
-  flickingInstance.addPlugins(autoPlayPlugin, paginationPlugin);
+  // 창 크기에 따라 Pagination 플러그인 조건부 추가
+  if (window.innerWidth < 1444) {
+    const paginationPlugin = new Pagination({
+      type: "bullet",
+    });
+    flickingInstance.addPlugins(paginationPlugin);
+  }
+
   return flickingInstance;
 }
 
 function responsiveFlicking(selector, autoPlayDuration = 4000) {
-  let paginationPlugin = new Pagination({
-    type: "bullet",
-  });
+  let paginationPlugin;
 
   const flickingInstance = new Flicking(selector, {
     align:
@@ -49,7 +52,7 @@ function responsiveFlicking(selector, autoPlayDuration = 4000) {
     stopOnHover: true,
   });
 
-  flickingInstance.addPlugins(autoPlayPlugin, paginationPlugin);
+  flickingInstance.addPlugins(autoPlayPlugin);
 
   function updatePlugins() {
     let newAlign;
@@ -62,32 +65,33 @@ function responsiveFlicking(selector, autoPlayDuration = 4000) {
       newAlign = "center";
     }
 
-    // Align 값을 필요에 따라 업데이트
+    // align 값이 변경되었는지 확인하고 업데이트
     if (flickingInstance.align !== newAlign) {
       flickingInstance.align = newAlign;
       flickingInstance.resize();
     }
 
-    // 화면 크기에 따라 Pagination 플러그인 재적용
-    flickingInstance.removePlugins(paginationPlugin);
+    // 기존의 Pagination 플러그인이 있으면 제거
+    if (paginationPlugin) {
+      flickingInstance.removePlugins(paginationPlugin);
+    }
 
-    paginationPlugin = new Pagination({
-      type: "bullet",
-    });
-
-    flickingInstance.addPlugins(paginationPlugin);
+    // 창 크기에 따라 Pagination 플러그인 조건부 추가
+    if (window.innerWidth < 1444) {
+      paginationPlugin = new Pagination({
+        type: "bullet",
+      });
+      flickingInstance.addPlugins(paginationPlugin);
+    }
   }
 
   // 초기 실행
   updatePlugins();
 
-  // 화면 크기 변경 시 플러그인 재적용
-  window.addEventListener("resize", updatePlugins);
-
   return flickingInstance;
 }
 
-// Flicking 인스턴스 초기화 (메뉴와 w는 나중에 조건에 따라 생성)
+// Flicking 인스턴스 초기화 (조건에 따라 메뉴와 w 인스턴스 생성)
 const m_flicking = createFlicking("#m-carousel");
 const b_flicking = createFlicking("#b-carousel");
 const flicking = createFlicking("#carousel");
