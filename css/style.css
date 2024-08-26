@@ -28,6 +28,18 @@ body.no-scroll {
   overflow: hidden;
 }
 
+@media screen and (max-width: 1444px) {
+  .up1444 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 977px) {
+  .up977 {
+    display: none;
+  }
+}
+
 h2 {
   width: 70%;
   margin: 0 auto;
@@ -342,6 +354,11 @@ h3 {
   margin: 0 auto;
   padding: 0 20px;
 }
+@media screen and (min-width: 1445px) {
+  .menu #menu-carousel {
+    display: none;
+  }
+}
 .menu .flicking-viewport {
   padding: 40px 10px;
 }
@@ -413,12 +430,17 @@ h3 {
   max-width: 1092px;
   margin: 0 auto;
 }
-.w_dunkin #w-carousel {
+.w_dunkin .flicking-viewport {
   padding: 40px 0;
 }
 @media screen and (max-width: 977px) {
-  .w_dunkin #w-carousel {
+  .w_dunkin .flicking-viewport {
     padding: 40px;
+  }
+}
+@media screen and (min-width: 977px) {
+  .w_dunkin #w-carousel {
+    display: none;
   }
 }
 .w_dunkin .panel {

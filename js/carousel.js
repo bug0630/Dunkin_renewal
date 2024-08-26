@@ -28,7 +28,6 @@ function createFlicking(selector, autoPlayDuration = 4000) {
 
 function responsiveFlicking(selector, autoPlayDuration = 4000) {
   const flickingInstance = new Flicking(selector, {
-    bound: true,
     circular: true,
     renderOnlyVisible: true,
     deceleration: 0.5,
@@ -45,12 +44,10 @@ function responsiveFlicking(selector, autoPlayDuration = 4000) {
 
   flickingInstance.addPlugins(autoPlayPlugin);
 
-  if (window.innerWidth < 1444) {
-    const paginationPlugin = new Pagination({
-      type: "bullet",
-    });
-    flickingInstance.addPlugins(paginationPlugin);
-  }
+  const paginationPlugin = new Pagination({
+    type: "bullet",
+  });
+  flickingInstance.addPlugins(paginationPlugin);
 
   return flickingInstance;
 }
