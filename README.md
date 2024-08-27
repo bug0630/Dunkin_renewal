@@ -7,7 +7,7 @@
   </tr>
   <tr>
     <td><img src="screencapture-bug0630-github-io-Dunkin-renewal-2024-08-22-16_06_58.png"> </td>
-    <td >(https://bug0630.github.io/Dunkin/)</td>
+    <td ><img src="screencapture-bug0630-github-io-Dunkin-2024-08-27-17_16_27.png"></td>
 
   </tr>
 </table>
