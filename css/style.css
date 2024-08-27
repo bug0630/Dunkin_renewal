@@ -215,15 +215,19 @@ h3 {
 }
 @media screen and (min-width: 768px) {
   .main_banner .product .month {
-    padding: 4% 0;
     font-size: clamp(10px, 1.7vw, 25px);
+    padding: 4% 0;
   }
 }
 .main_banner .product .month .material-symbols-outlined {
-  font-size: clamp(10px, 1.7vw, 25px);
   font-weight: bold;
   position: relative;
   top: 2px;
+}
+@media screen and (min-width: 768px) {
+  .main_banner .product .month .material-symbols-outlined {
+    font-size: clamp(10px, 1.7vw, 25px);
+  }
 }
 .main_banner .product .beverage {
   width: 100%;
