@@ -438,7 +438,7 @@ h3 {
     padding: 40px;
   }
 }
-@media screen and (min-width: 977px) {
+@media screen and (min-width: 978px) {
   .w_dunkin #w-carousel {
     display: none;
   }
@@ -490,7 +490,7 @@ h3 {
 .w_dunkin .flicking-pagination {
   height: 100px;
 }
-@media screen and (min-width: 977px) {
+@media screen and (min-width: 978px) {
   .w_dunkin .flicking-pagination {
     display: none;
   }
