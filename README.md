@@ -6,7 +6,7 @@
    
   </tr>
   <tr>
-    <td>https://bug0630.github.io/Dunkin_renewal/</td>
+    <td><img src="screencapture-bug0630-github-io-Dunkin-renewal-2024-08-22-16_06_58.png"> </td>
     <td >(https://bug0630.github.io/Dunkin/)</td>
 
   </tr>
