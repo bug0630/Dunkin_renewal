@@ -1,6 +1,6 @@
 # Dunkin_renewal
-<h3>던킨 리뉴얼 :  https://bug0630.github.io/Dunkin_renewal/ </h2>
-<h3>(구)던킨 : https://bug0630.github.io/Dunkin/ </h2>
+## 던킨 리뉴얼 :  https://bug0630.github.io/Dunkin_renewal/ 
+## (구)던킨 : https://bug0630.github.io/Dunkin/
 <table>
   <tr>
     <th>던킨 리뉴얼</th>
