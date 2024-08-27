@@ -13,5 +13,5 @@
   </tr>
 </table>
 
-## Flicking
-Flicking 캐러셀 활용
+## 사용 라이브러
+Flicking 캐러셀
