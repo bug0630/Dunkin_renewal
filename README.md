@@ -13,5 +13,6 @@
   </tr>
 </table>
 
-## 사용 라이브러리
-Flicking 캐러셀
+## Flicking 캐러셀
+- AutoPlay
+- Pagination
