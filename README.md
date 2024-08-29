@@ -1,5 +1,7 @@
 # Dunkin_renewal
+
 ## 던킨 리뉴얼 :  https://bug0630.github.io/Dunkin_renewal/ 
+clamp()함수 사용해 폰트사이즈 변화
 ## (구)던킨 : https://bug0630.github.io/Dunkin/
 <table>
   <tr>
