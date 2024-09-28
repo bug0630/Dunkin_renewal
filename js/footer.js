@@ -5,11 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 버튼이 존재하는 경우 클릭 이벤트 리스너를 추가합니다.
   if (topButton) {
-    topButton.addEventListener("click", function (event) {
-      // a 태그 기본 동작을 막습니다.
-      event.preventDefault();
-
-      // 페이지의 최상단으로 부드럽게 스크롤합니다.
+    topButton.addEventListener("click", function () {
       window.scrollTo({
         top: 0,
         behavior: "smooth",
