@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
               BRAND
               <span class="material-symbols-outlined">arrow_forward_ios</span>
             </div>
-            <ul class="drop">
+            <ul class="arcodion">
               <li>HISTORY</li>
               <li>DD COMMITMENT</li>
             </ul>
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
               MENU
               <span class="material-symbols-outlined">arrow_forward_ios</span>
             </div>
-            <ul class="drop">
+            <ul class="arcodion">
               <li>ALL</li>
               <li>DONUT</li>
               <li>FOOD</li>
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
               EVENT
               <span class="material-symbols-outlined">arrow_forward_ios</span>
             </div>
-            <ul class="drop">
+            <ul class="arcodion">
               <li>프로모션</li>
               <li>제휴혜택</li>
             </ul>
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
               ORDER
               <span class="material-symbols-outlined">arrow_forward_ios</span>
             </div>
-            <ul class="drop">
+            <ul class="arcodion">
               <li>케이터링</li>
               <li>딜리버리</li>
               <li>선물하기</li>
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="side_nav right">
             <button class="down">
               <div>EVENT</div>
-              <ul class="drop">
+              <ul class="arcodion">
                 <li>프로모션</li>
                 <li>제휴혜택</li>
               </ul>
@@ -141,16 +141,16 @@ document.addEventListener("DOMContentLoaded", function () {
   // nav 버튼 클릭
   document.querySelectorAll("header button").forEach((button) => {
     button.addEventListener("click", () => {
-      const drop = button.querySelector(".drop");
+      const arcodion = button.querySelector(".arcodion");
       const icon = button.querySelector(".material-symbols-outlined");
 
-      if (drop) {
+      if (arcodion) {
         if (button.classList.contains("active")) {
-          drop.style.height = "0";
+          arcodion.style.height = "0";
           button.classList.remove("active");
           if (icon) icon.classList.remove("rotate-270");
         } else {
-          drop.style.height = `${drop.scrollHeight}px`;
+          arcodion.style.height = `${arcodion.scrollHeight}px`;
           button.classList.add("active");
           if (icon) icon.classList.add("rotate-270");
         }
@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// 헤더 nav drop
+// 헤더 nav arcodion
 document.addEventListener("DOMContentLoaded", function () {
   const nav = document.querySelector(".m_h nav");
   const depth = nav.querySelector(".depth");
